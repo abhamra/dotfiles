@@ -109,7 +109,10 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    # alias ls='ls --color=auto'
+
+    # alias for eza
+    alias ls='eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -121,7 +124,21 @@ fi
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+
+export FZF_CTRL_T_OPTS="--preview 'batcat -n --color=always --line-range :500 {}'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+_fzf_comprun() {
+    local command=$1
+    shift
+
+    case "$command" in
+        cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+        export|unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
+        ssh)          fzf --preview 'dig {}' "$@" ;;
+        *)            fzf --preview "--preview 'batcat -n --color=always --line-range :500{}'" "$@" ;;
+    esac
+}
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

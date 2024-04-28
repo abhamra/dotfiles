@@ -1,4 +1,3 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -13,6 +12,12 @@ alias piv='pip install -v .'
 # function latex(){
     # pdflatex "$1".tex && evince "$1".pdf;
 # }
+
+# alias for fzf into vim
+alias vimf="fzf --bind 'enter:become(vim {})'"
+
+# alias for bat
+alias cat='batcat'
 
 # alias for tmux
 alias tmux="TERM=xterm-256color tmux"
@@ -138,8 +143,12 @@ fi
 # this is to enable oh-my-posh themes
 eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/gruvbox.omp.json)"
 
+
 if [ -f $HOME/.bash_aliases ]
 then
   . $HOME/.bash_aliases
 fi
 . "$HOME/.cargo/env"
+
+# for setting up fzf key binds and fuzzy completion
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

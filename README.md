@@ -34,3 +34,5 @@ $ stow .
 ```
 
 The idea for using stow was from the Youtube channel "Dreams of Autonomy"; their video is [here](https://www.youtube.com/watch?v=y6XCebnB9gs).
+
+Make sure to add command line stuff like fzf and bat, etc., from the video [here](https://www.youtube.com/watch?v=mmqDYw9C30I&ab_channel=JoseanMartinez).

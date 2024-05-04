@@ -13,8 +13,10 @@ alias piv='pip install -v .'
     # pdflatex "$1".tex && evince "$1".pdf;
 # }
 
+# alias nvim for vim
 # alias for fzf into vim
 alias vimf="fzf --bind 'enter:become(vim {})'"
+alias vim='nvim'
 
 # alias for bat
 alias cat='batcat'

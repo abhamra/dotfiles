@@ -14,8 +14,6 @@ alias piv='pip install -v .'
 # }
 
 # alias nvim for vim
-# alias for fzf into vim
-alias vimf="fzf --bind 'enter:become(vim {})'"
 alias vim='nvim'
 
 # alias for bat

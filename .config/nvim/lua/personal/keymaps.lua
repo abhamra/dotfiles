@@ -44,9 +44,11 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "p", '"_dP')
 vim.keymap.set("v", "P", '"_dp')
 
--- Exit on jj and jk
-vim.keymap.set("i", "jj", "<ESC>", opts)
+-- Exit on jk
 vim.keymap.set("i", "jk", "<ESC>", opts)
+
+-- Exit visual on jk
+vim.keymap.set("v", "jk", "<ESC>", opts)
 
 -- Map enter to ciw in normal mode
 vim.keymap.set("n", "<CR>", "ciw", opts)

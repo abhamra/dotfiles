@@ -1,3 +1,5 @@
+-- local custom_moonbow = require('3thparty.plugins.lualine_themes.lualine_theme')
+
 return {
   "nvim-lualine/lualine.nvim",
   enabled = true,

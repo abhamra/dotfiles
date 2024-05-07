@@ -6,7 +6,7 @@ return {
     config = function()
       -- configs...
       local theme = {
-        current = { fg = "#504945", bg = "transparent", style = "bold" },
+        current = { fg = "#7C7D83", bg = "transparent", style = "bold" },
         not_current = { fg = "#504945", bg = "transparent" },
 
         fill = { bg = "transparent" },

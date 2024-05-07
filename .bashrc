@@ -19,8 +19,8 @@ alias vim='nvim'
 # alias for bat
 alias cat='batcat'
 
-# alias for tmux
-alias tmux="TERM=xterm-256color tmux"
+# # alias for tmux
+# alias tmux="TERM=xterm-256color tmux"
 
 # creates an alias for accessing my journaling folder!
 alias journal='cd .. && cd mnt/c/Users/Arjun\ Bhamra/OneDrive/Desktop/journaling/ && nvim journal'

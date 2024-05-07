@@ -2,6 +2,8 @@
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
+vim.o.background = dark;
+
 -- Set highlight on search
 vim.o.hlsearch = false
 

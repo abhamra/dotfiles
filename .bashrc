@@ -16,6 +16,11 @@ alias piv='pip install -v .'
 # alias nvim for vim
 alias vim='nvim'
 
+# function for tmux-sessionizer
+function tms(){
+    . ~/scripts/tmux-sessionizer.sh $1;
+}
+
 # alias for bat
 alias cat='batcat'
 

@@ -26,6 +26,9 @@ vim.opt.wrap = true
 -- set indents when wrapped
 vim.opt.breakindent = true
 
+-- Set foldmethod
+vim.opt.foldmethod = "indent"
+
 -- highlight cursor
 vim.opt.cursorline = true
 -- set cursorcolumn = true

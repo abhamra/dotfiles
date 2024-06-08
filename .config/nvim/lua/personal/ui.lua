@@ -26,8 +26,10 @@ vim.opt.wrap = true
 -- set indents when wrapped
 vim.opt.breakindent = true
 
--- Set foldmethod
+-- Set folding options
 vim.opt.foldmethod = "indent"
+vim.opt.foldlevelstart = 1
+vim.opt.foldnestmax = 4
 
 -- highlight cursor
 vim.opt.cursorline = true

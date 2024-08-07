@@ -10,6 +10,9 @@ vim.o.hlsearch = false
 -- Make line numbers default
 vim.wo.number = true
 
+-- set shiftwidth=4
+vim.o.shiftwidth = 4
+
 -- Enable mouse mode
 vim.o.mouse = 'a'
 

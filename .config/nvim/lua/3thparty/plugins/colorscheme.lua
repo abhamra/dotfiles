@@ -1,9 +1,11 @@
 return {
-  {
-    "abhamra/moonbow.nvim",
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'moonbow'
-    end
-  },
+   {
+      "Shatur/neovim-ayu",
+      enabled = true,
+      event = "VimEnter",
+      opts = {},
+      config = function()
+         vim.cmd("colorscheme ayu-dark", opts)
+      end,
+   }
 }

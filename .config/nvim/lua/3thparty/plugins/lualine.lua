@@ -1,5 +1,3 @@
--- local custom_moonbow = require('3thparty.plugins.lualine_themes.lualine_theme')
-
 return {
   "nvim-lualine/lualine.nvim",
   enabled = true,
@@ -8,8 +6,8 @@ return {
   config = function()
     require('lualine').setup {
       options = {
+        theme = 'ayu',
         icons_enabled = true,
-        theme = 'moonbow',
         component_separators = { left = ' ', right = ' ' },
         section_separators = { left = '', right = '' },
         disabled_filetypes = {

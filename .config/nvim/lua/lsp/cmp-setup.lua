@@ -1,4 +1,4 @@
--- TODO: completely redo this entire file, from scratch, see if that helps (bitch)
+-- TODO: completely redo this entire file, from scratch, see if that helps
 -- also set up UltiSnips
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`

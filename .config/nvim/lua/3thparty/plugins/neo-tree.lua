@@ -102,6 +102,7 @@ return {
         {
           event = "neo_tree_buffer_enter",
           handler = function(_)
+            vim.cmd [[setlocal nofoldenable]]
             vim.opt_local.signcolumn = "auto"
           end,
         },

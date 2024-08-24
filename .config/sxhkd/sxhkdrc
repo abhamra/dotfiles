@@ -6,6 +6,10 @@
 super + Return
 	alacritty --config-file ~/.config/alacritty/alacritty.toml -o font.size=10
 
+# discord
+super + d
+	discord
+
 # program launcher
 alt + space
 	dmenu_run	

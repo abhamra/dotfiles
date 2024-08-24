@@ -7,7 +7,7 @@ super + Return
 	alacritty --config-file ~/.config/alacritty/alacritty.toml -o font.size=10
 
 # discord
-alt + 1
+alt + q
 	discord
 
 # firefox

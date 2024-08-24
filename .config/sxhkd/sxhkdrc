@@ -10,8 +10,17 @@ super + Return
 alt + 1
 	discord
 
+# firefox
 alt + 2
 	firefox
+
+# spotify
+alt + 3
+	spotify
+
+# nautilus
+alt + n
+	nautilus
 
 # program launcher
 alt + space

@@ -1,0 +1,17 @@
+
+configuration {
+    location: 0;
+    modes: "window,drun,run,ssh";
+    font: "mono 18";
+    show-icons: true;
+    icon-theme: "ePapirus";
+    steal-focus: true;
+}
+
+window {
+    width: 20%;
+    height: 5%;
+}
+
+@import "/usr/share/rofi/themes/gruvbox-dark.rasi"
+

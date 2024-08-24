@@ -1,0 +1,7 @@
+
+[Default Applications]
+text/html=thunderbird_thunderbird.desktop
+x-scheme-handler/mailto=thunderbird_thunderbird.desktop
+x-scheme-handler/mid=thunderbird_thunderbird.desktop
+x-scheme-handler/webcal=thunderbird_thunderbird.desktop
+x-scheme-handler/webcals=thunderbird_thunderbird.desktop

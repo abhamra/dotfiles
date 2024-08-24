@@ -11,7 +11,7 @@ vim.opt.cmdheight = 1
 vim.opt.signcolumn = "auto:2"
 
 -- syntax highlighting
-vim.opt.termguicolors = true
+-- vim.opt.termguicolors = true
 vim.opt.synmaxcol = 512
 
 -- show line numbers

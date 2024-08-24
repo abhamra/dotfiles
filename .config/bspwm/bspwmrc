@@ -1,0 +1,22 @@
+#! /bin/sh
+
+polybar &
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d I II III IV
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a firefox desktop=^1 follow=off -o
+bspc rule -a alacritty desktop=^2 follow=off -o
+bspc rule -a Zathura state=tiled
+
+firefox &
+
+feh --bg-fill ~/Pictures/firewatch_bg_3.jpg

@@ -33,7 +33,7 @@ alias tls='tmux ls'
 
 # tmux kill session
 function tks() {
-    tmux kill-session -t "$1$";
+    tmux kill-session -t "$1";
 }
 
 # tmux kill all sessions

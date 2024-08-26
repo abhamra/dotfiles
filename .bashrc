@@ -1,41 +1,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# creates an alias for nvim
-# alias vim='nvim'
-
-# alias for git
-alias g='git'
-
-alias piv='pip install -v .'
-
-# alias nvim for vim
-alias vim='nvim'
-
-# function for tmux-sessionizer
-function tms(){
-    . ~/scripts/tmux-sessionizer.sh $1;
-}
-
-# alias for bat
-alias cat='batcat'
-
-# venv stuff
-alias v='. venv/bin/activate'
-
-# tmux reattach named
-function ta() {
-    tmux attach -t "$1";
-}
-
-# tmux new named
-function tn() {
-    tmux new -t "$1";
-}
-
-alias tmux='tmux -2'
-
-
 export LLVM_INSTALL_DIR=~/bin/llvm16
 export PATH=$PATH:$LLVM_INSTALL_DIR/bin/
 export MLIR_DIR=$LLVM_INSTALL_DIR/lib/cmake/mlir/
@@ -137,15 +102,6 @@ _fzf_comprun() {
     esac
 }
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -153,6 +109,13 @@ fi
 #    . /etc/bash_completion
 #fi
 
+# if [ -f ~/.bash_aliases ]; then
+#     . ~/.bash_aliases
+# fi
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f $HOME/.bash_aliases ]
 then

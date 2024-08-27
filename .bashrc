@@ -1,7 +1,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-export LLVM_INSTALL_DIR=~/bin/llvm16
+export LLVM_INSTALL_DIR=~/bin/llvm18
 export PATH=$PATH:$LLVM_INSTALL_DIR/bin/
 export MLIR_DIR=$LLVM_INSTALL_DIR/lib/cmake/mlir/
 

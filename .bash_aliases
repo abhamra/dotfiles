@@ -1,6 +1,8 @@
 # alias for git
 alias g='git'
 
+alias gfo='git fetch origin'
+
 alias piv='pip install -v .'
 
 # alias nvim for vim

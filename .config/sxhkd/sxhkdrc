@@ -19,10 +19,10 @@ alt + 3
 	spotify
 
 # silly spotify binds for forward, backward
-ctrl + right
+ctrl + Right
 	dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 
-ctrl + left
+ctrl + Left
 	dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 
 # nautilus

@@ -17,7 +17,23 @@ return {
     config = function()
       require 'luasnip-latex-snippets'.setup()
       -- or setup({ use_treesitter = true })
-      require("luasnip").config.setup { enable_autosnippets = true }
+      local ls = require("luasnip")
+      ls.config.setup { enable_autosnippets = true }
+      local snip = ls.parser.parse_snippet({ trig = "tbb", name = "Bold" }, "\\textbf{$1}$0")
+      snip.condition = require("luasnip-latex-snippets.util.utils").not_math()
+      snip.priority = 10
+
+      ls.add_snippets("tex", { snip }, {
+        type = "autosnippets",
+      })
+
+      local snip2 = ls.parser.parse_snippet({ trig = "tii", name = "Italics" }, "\\textit{$1}$0")
+      snip2.condition = require("luasnip-latex-snippets.util.utils").not_math()
+      snip2.priority = 10
+
+      ls.add_snippets("tex", { snip2 }, {
+        type = "autosnippets",
+      })
     end,
   }
 }

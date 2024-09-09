@@ -33,6 +33,21 @@ alt + n
 alt + space
 	dmenu_run	
 
+# # brightness controls
+F7
+	brightnessctl -set 10%-
+
+F8
+	sudo brightnessctl -set 10%+
+
+
+# volume controls
+XF86Audio{Raise,Lower}Volume  
+	pulsemixer --change-volume {+,-}10
+ 
+XF86AudioMute  
+	pulsemixer  --toggle-mute
+
 # program launcher (try this!)
 # super + space
 # 	rofi -normal-window -show combi -modes combi -combi-modes "window,drun,run"

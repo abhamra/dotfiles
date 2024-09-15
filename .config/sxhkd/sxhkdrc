@@ -35,10 +35,10 @@ alt + space
 
 # # brightness controls
 F7
-	brightnessctl -set 10%-
+	brightnessctl s 10%-
 
 F8
-	sudo brightnessctl -set 10%+
+	brightnessctl s 10%+
 
 
 # volume controls

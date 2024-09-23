@@ -43,5 +43,10 @@ alias tkser='tmux kill-server'
 
 alias tmux='tmux -2'
 
+# for downloads
+function download() {
+    sudo dpkg -i "$1";
+}
+
 # alias for zoxide
 alias cd="z"

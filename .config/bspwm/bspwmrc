@@ -1,10 +1,18 @@
 #! /bin/sh
 
-polybar &
-
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV
+polybar main &
+
+if [[ $(xrandr -q | grep 'DisplayPort-1 connected') ]]; then
+    xrandr --output eDP --primary --mode 2880x1920 --rotate normal --output DisplayPort-1 --mode 2560x1440 --rotate normal --right-of eDP
+    polybar offset_monitor &
+fi
+
+bspc monitor eDP -d I II
+bspc monitor DisplayPort-1 -d III IV
+
+# bspc monitor -d I II III IV
 
 bspc config border_width         2
 bspc config window_gap          12

@@ -2,11 +2,10 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-polybar main &
+$HOME/.config/polybar/launch.sh
 
 if [[ $(xrandr -q | grep 'DisplayPort-1 connected') ]]; then
     xrandr --output eDP --primary --mode 2880x1920 --rotate normal --output DisplayPort-1 --mode 2560x1440 --rotate normal --right-of eDP
-    polybar offset_monitor &
 fi
 
 bspc monitor eDP -d I II

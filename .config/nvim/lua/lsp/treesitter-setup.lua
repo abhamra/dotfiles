@@ -4,12 +4,13 @@
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash'},
+    ensure_installed = { 'c', 'cpp', 'lua', 'python', 'rust', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'markdown', 'markdown_inline' },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
+    ignore_install = { "latex" },
 
-    highlight = { enable = true },
+    highlight = { enable = true, disable = { "markdown" }, },
     indent = { enable = true },
     incremental_selection = {
       enable = true,

@@ -8,8 +8,8 @@ if [[ $(xrandr -q | grep 'DisplayPort-1 connected') ]]; then
     xrandr --output eDP --primary --mode 2880x1920 --rotate normal --output DisplayPort-1 --mode 2560x1440 --rotate normal --right-of eDP
 fi
 
-bspc monitor eDP -d I II
-bspc monitor DisplayPort-1 -d III IV
+bspc monitor eDP -d I II III IV
+bspc monitor DisplayPort-1 -d V VI
 
 # bspc monitor -d I II III IV
 

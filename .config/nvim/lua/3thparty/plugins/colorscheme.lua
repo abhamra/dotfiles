@@ -1,11 +1,8 @@
+-- lua/plugins/rose-pine.lua
 return {
-   {
-      "Shatur/neovim-ayu",
-      enabled = true,
-      event = "VimEnter",
-      opts = {},
-      config = function()
-         vim.cmd("colorscheme ayu-dark", opts)
-      end,
-   }
+   "rose-pine/neovim",
+   name = "rose-pine",
+   config = function()
+      vim.cmd("colorscheme rose-pine")
+   end
 }

@@ -1,48 +1,16 @@
 return {
-  "nvim-lualine/lualine.nvim",
-  enabled = true,
-  lazy = false,
-  event = { "BufReadPost", "BufNewFile", "VeryLazy" },
+  'nvim-lualine/lualine.nvim',
+  event = 'ColorScheme',
   config = function()
-    require('lualine').setup {
+    require('lualine').setup({
       options = {
-        theme = 'ayu',
-        icons_enabled = true,
-        component_separators = { left = ' ', right = ' ' },
-        section_separators = { left = '', right = '' },
-        disabled_filetypes = {
-          statusline = {},
-          winbar = {},
+        --- @usage 'rose-pine' | 'rose-pine-alt'
+        theme = 'rose-pine',
+        highlight_groups = {
+          StatusLine = { fg = "love", bg = "love", blend = 10 },
+          StatusLineNC = { fg = "subtle", bg = "surface" },
         },
-        ignore_focus = {},
-        always_divide_middle = true,
-        globalstatus = false,
-        refresh = {
-          statusline = 1000,
-          tabline = 1000,
-          winbar = 1000,
-        }
-      },
-      sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = { 'filename', 'harpoon2' },
-        lualine_x = { 'encoding', 'fileformat', 'filetype' },
-        lualine_y = { 'progress' },
-        lualine_z = { 'location' }
-      },
-      inactive_sections = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = { 'filename' },
-        lualine_x = { 'location' },
-        lualine_y = {},
-        lualine_z = {}
-      },
-      tabline = {},
-      winbar = {},
-      inactive_winbar = {},
-      extensions = {}
-    }
-  end,
+      }
+    })
+  end
 }

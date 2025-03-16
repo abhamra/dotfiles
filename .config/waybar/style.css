@@ -1,0 +1,313 @@
+@import "./rose-pine.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font Mono", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: rgba(@base, 0.5);
+    border-bottom: 3px solid rgba(@muted, 0.5);
+    color: @text;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: @highlightLow;
+}
+
+window#waybar.chromium {
+    background-color: @base;
+    border: none;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px @text;
+}
+
+#pulseaudio:hover {
+    background-color: @gold;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: @text;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+    background-color: @highlightMed;
+    box-shadow: inset 0 -3px @text;
+}
+
+#workspaces button.urgent {
+    background-color: @love;
+}
+
+#mode {
+    background-color: @highlightMed;
+    box-shadow: inset 0 -3px @text;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+    color: @text;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: @highlightMed;
+}
+
+#battery {
+    background-color: @text;
+    color: @base;
+}
+
+#battery.charging, #battery.plugged {
+    color: @text;
+    background-color: @pine;
+}
+
+@keyframes blink {
+    to {
+        background-color: @text;
+        color: @base;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: @love;
+    color: @text;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#power-profiles-daemon {
+    padding-right: 15px;
+}
+
+#power-profiles-daemon.performance {
+    background-color: @love;
+    color: @text;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: @pine;
+    color: @text;
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: @foam;
+    color: @base;
+}
+
+label:focus {
+    background-color: @base;
+}
+
+#cpu {
+    background-color: @foam;
+    color: @base;
+}
+
+#memory {
+    background-color: @iris;
+}
+
+#disk {
+    background-color: @gold;
+}
+
+#backlight {
+    background-color: @foam;
+}
+
+#network {
+    background-color: @pine;
+}
+
+#network.disconnected {
+    background-color: @love;
+}
+
+#pulseaudio {
+    background-color: @gold;
+    color: @base;
+}
+
+#pulseaudio.muted {
+    background-color: @muted;
+    color: @base;
+}
+
+#wireplumber {
+    background-color: @rose;
+    color: @base;
+}
+
+#wireplumber.muted {
+    background-color: @love;
+}
+
+#custom-media {
+    background-color: @foam;
+    color: @base;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: @foam;
+}
+
+#custom-media.custom-vlc {
+    background-color: @gold;
+}
+
+#temperature {
+    background-color: @rose;
+}
+
+#temperature.critical {
+    background-color: @love;
+}
+
+#tray {
+    background-color: @pine;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @love;
+}
+
+#idle_inhibitor {
+    background-color: @highlightLow;
+}
+
+#idle_inhibitor.activated {
+    background-color: @text;
+    color: @highlightLow;
+}
+
+#mpd {
+    background-color: @foam;
+    color: @base;
+}
+
+#mpd.disconnected {
+    background-color: @love;
+}
+
+#mpd.stopped {
+    background-color: @muted;
+}
+
+#mpd.paused {
+    background-color: @highlightMed;
+}
+
+#language {
+    background: @pine;
+    color: @love;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: @foam;
+    color: @base;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: @text;
+}
+
+#privacy-item.screenshare {
+    background-color: @gold;
+}
+
+#privacy-item.audio-in {
+    background-color: @pine;
+}
+
+#privacy-item.audio-out {
+    background-color: @foam;
+}
+

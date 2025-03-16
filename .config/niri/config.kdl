@@ -7,19 +7,28 @@
 // Find the full list of options on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 
-// Defining what spawns at startup
-spawn-at-startup "waybar" "-c" "/home/arjunbhamra/.config/waybar/config.jsonc"
-spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/arjunbhamra/Pictures/sushi-dark.png"
-
 // workspace "browser"
 //
 // workspace "chat" {
 //     open-on-output "Some Company CoolMonitor 1234"
 // }
 // NOTE: Above: Workspace definition examples
-workspace "browser"
-workspace "coding"
-workspace "chill"
+// workspace "browser"
+// workspace "coding"
+// workspace "chill"
+
+// Defining what spawns at startup
+spawn-at-startup "waybar" "-c" "/home/arjunbhamra/.config/waybar/config.jsonc"
+spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/arjunbhamra/Pictures/sushi-dark.png"
+// Or, if you built it by hand:
+spawn-at-startup "/home/arjunbhamra/pkgs/xwayland-satellite/target/release/xwayland-satellite"
+spawn-at-startup "alacritty"
+spawn-at-startup "firefox"
+
+environment {
+    // random display for now
+    DISPLAY ":12"
+}
 
 input {
     keyboard {
@@ -28,7 +37,7 @@ input {
             // For more information, see xkeyboard-config(7).
 
             // For example:
-            // layout "us,ru"
+            layout "us"
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
         }
     }
@@ -305,24 +314,24 @@ window-rule {
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
-window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-    open-on-workspace "browser"
-}
-
-window-rule {
-    match app-id=r#"^Alacritty$"#
-    open-on-workspace "coding"
-}
-
-window-rule {
-    match app-id=r#"^discord$"#
-    open-on-workspace "chill"
-}
+// window-rule {
+//     // This app-id regular expression will work for both:
+//     // - host Firefox (app-id is "firefox")
+//     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+//     match at-startup=true app-id=r#"firefox$"# title="^Picture-in-Picture$"
+//     open-floating true
+//     open-on-workspace "browser"
+// }
+//
+// window-rule {
+//     match at-startup=true app-id=r#"^Alacritty$"#
+//     open-on-workspace "coding"
+// }
+//
+// window-rule {
+//     match app-id=r#"^discord$"#
+//     open-on-workspace "chill"
+// }
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)

@@ -6,7 +6,7 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Fast saving
-vim.keymap.set("n", "<Leader>q", ":q!<CR>", opts)
+-- vim.keymap.set("n", "<Leader>q", ":q!<CR>", opts)
 vim.keymap.set({ "" }, '<c-s>', ':w!<CR>', opts)
 
 -- Remap for dealing with word wrap
@@ -19,11 +19,6 @@ vim.api.nvim_set_keymap("n", "<leader>tt", ":tabclose<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>to", ":tabonly<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>tl", ":tabn<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>th", ":tabp<CR>", { noremap = true })
-
--- move current tab to previous position
-vim.api.nvim_set_keymap("n", "<leader>tmp", ":-tabmove<CR>", { noremap = true })
--- move current tab to next position
-vim.api.nvim_set_keymap("n", "<leader>tmn", ":+tabmove<CR>", { noremap = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`

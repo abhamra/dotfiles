@@ -4,6 +4,12 @@ return {
   event = "VimEnter",
   lazy = true,
   opts = function()
+    vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#eb6592", bold = true })     -- Rose Pine love
+    -- vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#f6c177", bold = true })     -- Rose Pine love
+    vim.api.nvim_set_hl(0, "AlphaButtons", { fg = "#9ccfd8" })                 -- Rose Pine iris
+    vim.api.nvim_set_hl(0, "AlphaShortcut", { fg = "#31748f", italic = true }) -- Rose Pine gold
+    vim.api.nvim_set_hl(0, "AlphaFooter", { fg = "#f6c177" })                  -- Rose Pine foam
+
     local dashboard = require("alpha.themes.dashboard")
     local logo = [[
     ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
@@ -12,7 +18,7 @@ return {
     ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
     ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
     ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
-    
+
     "Experience becoming [...] make your soul grow"
     -- Kurt Vonnegut ]]
 

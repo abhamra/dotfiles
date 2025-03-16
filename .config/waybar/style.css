@@ -1,13 +1,13 @@
 @import "./rose-pine.css";
 
 * {
-    font-family: "JetBrainsMono Nerd Font Mono", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
 window#waybar {
-    background-color: rgba(@base, 0.5);
-    border-bottom: 3px solid rgba(@muted, 0.5);
+    background-color: @base;
+    border-bottom: 3px solid @muted;
     color: @text;
     transition-property: background-color;
     transition-duration: 0.5s;
@@ -48,7 +48,7 @@ button:hover {
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: @surface;
 }
 
 #workspaces button.focused {
@@ -279,11 +279,11 @@ label:focus {
 }
 
 #keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
+    background: @base;
 }
 
 #scratchpad {
-    background: rgba(0, 0, 0, 0.2);
+    background: @base;
 }
 
 #scratchpad.empty {

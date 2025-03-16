@@ -64,7 +64,7 @@
                     "default": ""
             // add "1", "2", etc.
             }
-    }
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,

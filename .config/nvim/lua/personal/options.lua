@@ -4,11 +4,6 @@
 
 vim.o.background = dark;
 
-vim.cmd [[
-  highlight Normal guibg=none
-  highlight NonText guibg=none
-]]
-
 -- Set highlight on search
 vim.o.hlsearch = false
 

@@ -11,6 +11,9 @@ alias vim 'nvim'
 # Alias for bat
 alias cat 'batcat'
 
+# alias for eza
+alias ls 'eza'
+
 # venv stuff
 alias v 'source venv/bin/activate.fish'
 

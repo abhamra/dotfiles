@@ -1,6 +1,11 @@
 . ~/.config/fish/aliases.fish
 fish_config theme choose "Rosé Pine"
 
+set -g man_blink -o eb6f92    # love (soft red)
+set -g man_bold -o 31748f     # pine (blue-green)
+set -g man_standout -b 191724 908caa  # base background, subtle foreground
+set -g man_underline -u 9ccfd8  # foam (cyan-like)
+
 function fish_prompt
     set -g __fish_git_prompt_show_informative_status true
     set -g __fish_git_prompt_use_informative_chars false

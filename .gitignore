@@ -1,2 +1,14 @@
-# .config/discord
 /.config/discord/
+/.config/dconf/
+/.config/evolution/
+/.config/ibus/
+/.config/tiling-assistant/
+/.config/Electron/
+/.config/gnome-session/
+/.config/goa*
+/.config/gtk*
+/.config/nautilus/
+/.config/update-notifier/
+/.config/user-dirs.*
+/.config/gnome-initial-setup-done
+.gitignore

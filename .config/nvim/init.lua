@@ -3,6 +3,7 @@
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ","
+vim.api.nvim_set_option("clipboard", "unnamedplus");
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 require('lazy-bootstrap')

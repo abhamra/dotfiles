@@ -550,7 +550,7 @@
             "enabled": false
         },
         "WebKeybinds": {
-            "enabled": true
+            "enabled": false
         },
         "WebScreenShareFixes": {
             "enabled": true
@@ -593,6 +593,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1742320349933
+        "settingsSyncVersion": 1742328679945
     }
 }

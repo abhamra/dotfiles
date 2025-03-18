@@ -1,5 +1,5 @@
 /.config/discord/
-/.config/dconf
+/.config/dconf/user
 /.config/evolution/
 /.config/ibus/
 /.config/tiling-assistant/
@@ -11,4 +11,7 @@
 /.config/update-notifier/
 /.config/user-dirs.*
 /.config/gnome-initial-setup-done
+/.config/mimeapps.list
+/.config/spotify/
+/.config/systemd/
 .gitignore

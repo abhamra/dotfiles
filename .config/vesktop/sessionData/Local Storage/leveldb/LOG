@@ -1,0 +1,32 @@
+2025/03/18-13:36:22.294 c101 Creating DB /home/arjunbhamra/.config/vesktop/sessionData/Local Storage/leveldb since it was missing.
+2025/03/18-13:36:22.316 c101 Reusing MANIFEST /home/arjunbhamra/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2025/03/18-13:38:27.919 c006 Level-0 table #5: started
+2025/03/18-13:38:27.924 c006 Level-0 table #5: 91459 bytes OK
+2025/03/18-13:38:27.926 c006 Delete type=0 #3
+2025/03/18-13:48:08.135 c006 Level-0 table #7: started
+2025/03/18-13:48:08.139 c006 Level-0 table #7: 51930 bytes OK
+2025/03/18-13:48:08.141 c006 Delete type=0 #4
+2025/03/18-13:48:24.191 c006 Level-0 table #9: started
+2025/03/18-13:48:24.195 c006 Level-0 table #9: 44259 bytes OK
+2025/03/18-13:48:24.197 c006 Delete type=0 #6
+2025/03/18-14:46:37.749 c006 Level-0 table #11: started
+2025/03/18-14:46:37.753 c006 Level-0 table #11: 54485 bytes OK
+2025/03/18-14:46:37.754 c006 Delete type=0 #8
+2025/03/18-14:50:53.000 c006 Level-0 table #13: started
+2025/03/18-14:50:53.008 c006 Level-0 table #13: 41696 bytes OK
+2025/03/18-14:50:53.010 c006 Delete type=0 #10
+2025/03/18-15:28:29.099 c006 Level-0 table #15: started
+2025/03/18-15:28:29.104 c006 Level-0 table #15: 82006 bytes OK
+2025/03/18-15:28:29.106 c006 Delete type=0 #12
+2025/03/18-15:28:29.107 c006 Compacting 4@0 + 1@1 files
+2025/03/18-15:28:29.109 c006 Generated table #16@0: 22 keys, 50214 bytes
+2025/03/18-15:28:29.110 c006 Compacted 4@0 + 1@1 files => 50214 bytes
+2025/03/18-15:28:29.111 c006 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/03/18-15:28:29.111 c006 Delete type=2 #11
+2025/03/18-15:28:29.111 c006 Delete type=2 #9
+2025/03/18-15:28:29.111 c006 Delete type=2 #15
+2025/03/18-15:28:29.111 c006 Delete type=2 #7
+2025/03/18-15:28:29.111 c006 Delete type=2 #13
+2025/03/18-15:29:05.161 c006 Level-0 table #18: started
+2025/03/18-15:29:05.165 c006 Level-0 table #18: 46681 bytes OK
+2025/03/18-15:29:05.166 c006 Delete type=0 #14

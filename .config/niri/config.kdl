@@ -20,14 +20,13 @@
 // Defining what spawns at startup
 spawn-at-startup "waybar" "-c" "/home/arjunbhamra/.config/waybar/config.jsonc"
 spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/arjunbhamra/Pictures/sushi-dark.png"
-// Or, if you built it by hand:
-spawn-at-startup "/home/arjunbhamra/pkgs/xwayland-satellite/target/release/xwayland-satellite"
 spawn-at-startup "alacritty"
 spawn-at-startup "firefox"
+// Or, if you built it by hand:
+spawn-at-startup "/home/arjunbhamra/pkgs/xwayland-satellite/target/release/xwayland-satellite" ":1"
 
 environment {
-    // random display for now
-    DISPLAY ":12"
+    DISPLAY ":1"
 }
 
 input {
@@ -126,7 +125,7 @@ input {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 8
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -207,11 +206,11 @@ layout {
     border {
         // The settings are the same as for the focus ring.
         // If you enable the border, you probably want to disable the focus ring.
-        off
+        // off
 
-        width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
+        width 2
+        active-color "#eb6f92"
+        inactive-color "#191724"
 
         // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
@@ -278,7 +277,7 @@ layout {
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.

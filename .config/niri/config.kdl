@@ -19,7 +19,8 @@
 
 // Defining what spawns at startup
 spawn-at-startup "waybar" "-c" "/home/arjunbhamra/.config/waybar/config.jsonc"
-spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/arjunbhamra/Pictures/sushi-dark.png"
+// spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/arjunbhamra/Pictures/sushi-dark.png"
+spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/arjunbhamra/Pictures/firewatch.png"
 spawn-at-startup "alacritty"
 spawn-at-startup "firefox"
 // Or, if you built it by hand:

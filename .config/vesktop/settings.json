@@ -3,5 +3,9 @@
     "minimizeToTray": true,
     "arRPC": true,
     "splashColor": "rgb(224, 222, 244)",
-    "splashBackground": "rgb(25, 23, 36)"
+    "splashBackground": "rgb(25, 23, 36)",
+    "spellCheckLanguages": [
+        "en-US",
+        "en"
+    ]
 }

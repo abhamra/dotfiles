@@ -15,4 +15,5 @@
 /.config/spotify/
 /.config/systemd/
 .config/vesktop
+.config/spicetify
 .gitignore

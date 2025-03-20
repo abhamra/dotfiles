@@ -7,5 +7,6 @@
     "spellCheckLanguages": [
         "en-US",
         "en"
-    ]
+    ],
+    "staticTitle": true
 }

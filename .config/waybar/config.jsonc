@@ -61,8 +61,8 @@
   "niri/window": {
     "rewrite": {
       "(.*) Mozilla Firefox": "Firefox",
-      "(.*) ~": "Alacritty",
-      "Discord (.*)": "Discord",
+      "(.*)~": "Alacritty",
+      "(.*)Discord (.*)": "Discord",
       "Spotify (.*)": "Spotify",
     }
   },

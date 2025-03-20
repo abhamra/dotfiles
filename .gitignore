@@ -14,6 +14,7 @@
 /.config/mimeapps.list
 /.config/spotify/
 /.config/systemd/
-.config/vesktop/
+.config/vesktop/*
+.config/enchant/*
 .config/spicetify
 .gitignore

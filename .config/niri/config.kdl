@@ -19,10 +19,12 @@
 
 // Defining what spawns at startup
 spawn-at-startup "waybar" "-c" "/home/arjunbhamra/.config/waybar/config.jsonc"
+spawn-at-startup "swaync"
 // spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/arjunbhamra/Pictures/sushi-dark.png"
 spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/arjunbhamra/Pictures/firewatch.png"
 spawn-at-startup "alacritty"
 spawn-at-startup "firefox"
+spawn-at-startup "vesktop"
 // Or, if you built it by hand:
 spawn-at-startup "/home/arjunbhamra/pkgs/xwayland-satellite/target/release/xwayland-satellite" ":1"
 
@@ -296,7 +298,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+    slowdown 0.75
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -382,6 +384,8 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "s" "10%-"; }
+    XF86MonBrightnessUp { spawn "brightnessctl" "s" "10%+"; }
 
     Mod+W { close-window; }
 

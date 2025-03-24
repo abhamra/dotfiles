@@ -1,9 +1,0 @@
-on-button-left=dismiss
-on-button-right=invoke-default-action
-
-font=JetBrainsNerdFontMono 10
-
-background-color=#191724FF
-text-color=#e0def4FF
-
-default-timeout=5000

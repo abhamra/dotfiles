@@ -1,6 +1,14 @@
 . ~/.config/fish/aliases.fish
 fish_config theme choose "Rosé Pine"
 
+function fish_greeting
+end
+
+# for llvm19
+set -x LLVM_INSTALL_DIR ~/bin/llvm19
+set -x PATH $PATH "$LLVM_INSTALL_DIR/bin"
+set -x MLIR_DIR "$LLVM_INSTALL_DIR/lib/cmake/mlir/"
+
 set -g man_blink -o eb6f92    # love (soft red)
 set -g man_bold -o 31748f     # pine (blue-green)
 set -g man_standout -b 191724 908caa  # base background, subtle foreground

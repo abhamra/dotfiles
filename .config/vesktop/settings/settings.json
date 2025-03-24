@@ -93,9 +93,7 @@
             "enabled": false
         },
         "BetterSettings": {
-            "enabled": true,
-            "disableFade": true,
-            "eagerLoad": true
+            "enabled": true
         },
         "BetterUploadButton": {
             "enabled": false
@@ -104,11 +102,10 @@
             "enabled": false
         },
         "BlurNSFW": {
-            "enabled": true,
-            "blurAmount": 10
+            "enabled": false
         },
         "CallTimer": {
-            "enabled": true
+            "enabled": false
         },
         "ClearURLs": {
             "enabled": false
@@ -150,7 +147,7 @@
             "enabled": false
         },
         "Decor": {
-            "enabled": true
+            "enabled": false
         },
         "DisableCallIdle": {
             "enabled": false
@@ -189,7 +186,7 @@
             "enabled": true
         },
         "FixYoutubeEmbeds": {
-            "enabled": true
+            "enabled": false
         },
         "ForceOwnerCrown": {
             "enabled": false
@@ -300,7 +297,7 @@
             "enabled": false
         },
         "NoOnboardingDelay": {
-            "enabled": true
+            "enabled": false
         },
         "NoPendingCount": {
             "enabled": false
@@ -360,22 +357,7 @@
             "enabled": false
         },
         "PinDMs": {
-            "enabled": true,
-            "canCollapseDmSection": false,
-            "userBasedCategoryList": {
-                "350178543235235840": [
-                    {
-                        "id": "s20df5v3e9q",
-                        "name": " ",
-                        "color": 10038562,
-                        "collapsed": false,
-                        "channels": [
-                            "844555480381784084"
-                        ]
-                    }
-                ]
-            },
-            "pinOrder": 0
+            "enabled": false
         },
         "PlainFolderIcon": {
             "enabled": false
@@ -405,7 +387,7 @@
             "enabled": false
         },
         "ReplyTimestamp": {
-            "enabled": true
+            "enabled": false
         },
         "RevealAllSpoilers": {
             "enabled": false
@@ -465,14 +447,13 @@
             "enabled": false
         },
         "SpotifyControls": {
-            "enabled": true,
-            "hoverControls": false
+            "enabled": true
         },
         "SpotifyCrack": {
             "enabled": false
         },
         "SpotifyShareCommands": {
-            "enabled": false
+            "enabled": true
         },
         "StartupTimings": {
             "enabled": false
@@ -550,7 +531,7 @@
             "enabled": false
         },
         "WebKeybinds": {
-            "enabled": false
+            "enabled": true
         },
         "WebScreenShareFixes": {
             "enabled": true
@@ -562,7 +543,7 @@
             "enabled": false
         },
         "YoutubeAdblock": {
-            "enabled": true
+            "enabled": false
         },
         "BadgeAPI": {
             "enabled": true
@@ -593,6 +574,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1742328679945
+        "settingsSyncVersion": 1742823090629
     }
 }

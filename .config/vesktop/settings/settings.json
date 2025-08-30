@@ -2,13 +2,15 @@
     "autoUpdate": true,
     "autoUpdateNotification": true,
     "useQuickCss": true,
-    "themeLinks": [],
+    "themeLinks": [
+        "https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/flavors/rosepine.theme.css"
+    ],
     "eagerPatches": false,
     "enabledThemes": [
         "rosepine.theme.css"
     ],
     "enableReactDevtools": false,
-    "frameless": false,
+    "frameless": true,
     "transparent": false,
     "winCtrlQ": false,
     "disableMinSize": false,
@@ -93,7 +95,9 @@
             "enabled": false
         },
         "BetterSettings": {
-            "enabled": true
+            "enabled": true,
+            "disableFade": true,
+            "eagerLoad": true
         },
         "BetterUploadButton": {
             "enabled": false
@@ -312,7 +316,7 @@
             "enabled": false
         },
         "NoTypingAnimation": {
-            "enabled": false
+            "enabled": true
         },
         "NoUnblockToJump": {
             "enabled": false
@@ -345,7 +349,9 @@
             "enabled": false
         },
         "PermissionFreeWill": {
-            "enabled": false
+            "enabled": true,
+            "lockout": true,
+            "onboarding": true
         },
         "PermissionsViewer": {
             "enabled": false
@@ -357,7 +363,22 @@
             "enabled": false
         },
         "PinDMs": {
-            "enabled": false
+            "enabled": true,
+            "canCollapseDmSection": false,
+            "userBasedCategoryList": {
+                "350178543235235840": [
+                    {
+                        "id": "8k04bf8ym9v",
+                        "name": " ",
+                        "color": 10070709,
+                        "collapsed": false,
+                        "channels": [
+                            "844555480381784084"
+                        ]
+                    }
+                ]
+            },
+            "pinOrder": 0
         },
         "PlainFolderIcon": {
             "enabled": false
@@ -447,7 +468,8 @@
             "enabled": false
         },
         "SpotifyControls": {
-            "enabled": true
+            "enabled": true,
+            "hoverControls": false
         },
         "SpotifyCrack": {
             "enabled": false
@@ -574,6 +596,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1742823090629
+        "settingsSyncVersion": 1743727970234
     }
 }

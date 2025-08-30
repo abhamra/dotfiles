@@ -3,6 +3,8 @@ alias g 'git'
 
 alias gfo 'git fetch origin'
 
+alias spot 'flatpak run io.github.hrkfdn.ncspot'
+
 alias piv 'pip install -v .'
 
 # Alias nvim for vim
@@ -47,5 +49,5 @@ function download
 end
 
 # Alias for zoxide
-# alias cd 'z'
-set --universal zoxide_cmd c
+alias cd 'z'
+# set --universal zoxide_cmd c

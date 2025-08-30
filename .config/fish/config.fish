@@ -40,4 +40,12 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# fzf configure bindings
+fzf_configure_bindings --directory=\cf --variables=\e\cv
+
 fish_add_path /home/arjunbhamra/.spicetify
+fish_add_path $HOME/.cargo/bin
+fish_add_path /home/arjunbhamra/.local/bin
+zoxide init fish | source
+
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/arjunbhamra/.ghcup/bin $PATH # ghcup-env

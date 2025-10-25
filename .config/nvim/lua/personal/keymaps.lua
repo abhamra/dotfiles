@@ -46,7 +46,7 @@ vim.keymap.set("i", "jk", "<ESC>", opts)
 vim.keymap.set("v", "jk", "<ESC>", opts)
 
 -- Map enter to ciw in normal mode
-vim.keymap.set("n", "<CR>", "ciw", opts)
+vim.keymap.set("n", "<S-CR>", "ciw", opts)
 
 -- Move between windows
 vim.keymap.set("n", "<C-h>", "<C-w><Left>", opts)

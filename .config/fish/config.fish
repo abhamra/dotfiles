@@ -4,8 +4,8 @@ fish_config theme choose "Rosé Pine"
 function fish_greeting
 end
 
-# for llvm19
-set -x LLVM_INSTALL_DIR ~/bin/llvm19
+# for llvm21
+set -x LLVM_INSTALL_DIR ~/bin/llvm21
 set -x PATH $PATH "$LLVM_INSTALL_DIR/bin"
 set -x MLIR_DIR "$LLVM_INSTALL_DIR/lib/cmake/mlir/"
 

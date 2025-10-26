@@ -82,15 +82,17 @@ mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
 
--- mason_lspconfig.setup_handlers {
---   function(server_name)
---     require('lspconfig')[server_name].setup {
---       capabilities = capabilities,
---       on_attach = on_attach,
---       settings = servers[server_name],
---       filetypes = (servers[server_name] or {}).filetypes,
---     }
---   end,
--- }
+vim.lsp.config('clangd', {
+  cmd = { 'clangd', '--header-insertion=never', '--sort-includes=false' },
+})
+
+vim.lsp.config('rust_analyzer', {
+  settings = {
+    ['rust-analyzer'] = {
+      cargo = { allFeatures = true },
+      procMacro = { enable = true },
+    },
+  },
+})
 
 -- vim: ts=2 sts=2 sw=2 et

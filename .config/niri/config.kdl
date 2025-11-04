@@ -18,19 +18,14 @@
 // workspace "chill"
 
 // Defining what spawns at startup
-spawn-at-startup "waybar" "-c" "/home/arjunbhamra/.config/waybar/config.jsonc"
+spawn-at-startup "waybar" "-c" "/home/asb/.config/waybar/config.jsonc"
 spawn-at-startup "swaync"
-// spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/arjunbhamra/Pictures/sushi-dark.png"
-spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/arjunbhamra/Pictures/firewatch.png"
+// spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/asb/Pictures/sushi-dark.png"
+spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/asb/Pictures/firewatch.png"
 // spawn-at-startup "alacritty"
 spawn-at-startup "firefox"
 spawn-at-startup "discord"
 // Or, if you built it by hand:
-spawn-at-startup "/home/arjunbhamra/pkgs/xwayland-satellite/target/release/xwayland-satellite" ":1"
-
-environment {
-    DISPLAY ":1"
-}
 
 input {
     keyboard {
@@ -314,15 +309,15 @@ animations {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
+// // Work around WezTerm's initial configure bug
+// // by setting an empty default-column-width.
+// window-rule {
+//     // This regular expression is intentionally made as specific as possible,
+//     // since this is the default config, and we want no false positives.
+//     // You can get away with just app-id="wezterm" if you want.
+//     match app-id=r#"^org\.wezfurlong\.wezterm$"#
+//     default-column-width {}
+// }
 
 // Open the Firefox picture-in-picture player as floating by default.
 // window-rule {
@@ -379,8 +374,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    // Mod+Return { spawn "alacritty"; }
-    Mod+Return { spawn "wezterm"; }
+    Mod+Return { spawn "foot"; }
     Mod+Space { spawn "fuzzel"; }
     // Super+Alt+L { spawn "swaylock"; }
 

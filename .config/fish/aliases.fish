@@ -51,4 +51,5 @@ end
 
 # Alias for zoxide
 alias cd 'z'
-# set --universal zoxide_cmd c
+
+alias zola 'flatpak run org.getzola.zola'

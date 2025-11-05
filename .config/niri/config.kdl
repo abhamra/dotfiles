@@ -26,6 +26,12 @@ spawn-at-startup "/usr/bin/swaybg" "-m" "fill" "-i" "/home/asb/Pictures/firewatc
 spawn-at-startup "firefox"
 spawn-at-startup "discord"
 // Or, if you built it by hand:
+spawn-at-startup "home/asb/projects/xwayland-satellite/target/release/xwayland-satellite" ":1"
+
+environment {
+    DISPLAY ":1"
+}
+
 
 input {
     keyboard {

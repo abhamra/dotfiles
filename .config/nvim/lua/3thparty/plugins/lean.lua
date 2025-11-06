@@ -3,9 +3,9 @@ return {
   event = { 'BufReadPre *.lean', 'BufNewFile *.lean' },
 
   dependencies = {
-    'neovim/nvim-lspconfig',
+    -- 'neovim/nvim-lspconfig',
     'nvim-lua/plenary.nvim',
-    'hrsh7th/nvim-cmp',
+    -- 'hrsh7th/nvim-cmp',
 
     -- optional dependencies:
 

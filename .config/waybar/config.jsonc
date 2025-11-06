@@ -13,7 +13,7 @@
   //
   "modules-left": [
     "group/datetime",
-    "group/workspacegroup"
+    "group/workspaces"
   ],
   // Groups
   "group/datetime": {
@@ -22,26 +22,11 @@
       "clock"
     ]
   },
-  "group/workspacegroup": {
-    "orientation": "horizontal",
-    "modules": [
-      "ext/workspaces"
-      // "niri/window",
-    ]
-  },
-  //
-  // Configuration
-  //
-  // Clock
-  "clock": {
-    "format": "󰅐 {:%R    %d/%m}",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>"
-  },
-  // Workspaces
-  "ext/workspaces": {
-    "all-outputs": true,
-    "warp-on-scroll": false,
-    "active-only": false,
+  "group/workspaces": {
+    "format": "{icon}",
+    "ignore-hidden": true,
+    "on-click": "activate",
+    "on-click-right": "deactivate",
     "format": "{icon}",
     // "sort-by-number": true,
     // NOTE: If we have persistent workspaces, add their icons here!
@@ -58,6 +43,35 @@
       "10": "十"
     }
   },
+  //
+  // Configuration
+  //
+  // Clock
+  "clock": {
+    "format": "󰅐 {:%R    %d/%m}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>"
+  },
+  // Workspaces
+  // "ext/workspaces": {
+  //   "all-outputs": true,
+  //   "warp-on-scroll": false,
+  //   "active-only": false,
+  //   "format": "{icon}",
+  //   // "sort-by-number": true,
+  //   // NOTE: If we have persistent workspaces, add their icons here!
+  //   "format-icons": {
+  //     "1": "一",
+  //     "2": "二",
+  //     "3": "三",
+  //     "4": "四",
+  //     "5": "五",
+  //     "6": "六",
+  //     "7": "七",
+  //     "8": "八",
+  //     "9": "九",
+  //     "10": "十"
+  //   }
+  // },
   /////////////////////////////////////
   //
   // Modules - center
@@ -135,7 +149,7 @@
   //
   // Network
   "network": {
-    "format-wifi": "  {signalStrength}%",
+    "format-wifi": " {signalStrength}%",
     "on-click": "nm-connection-editor"
   },
   // Bluetooth

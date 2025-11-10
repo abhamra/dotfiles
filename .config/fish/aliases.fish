@@ -12,7 +12,7 @@ alias piv 'pip install -v .'
 alias vim 'nvim'
 
 # Alias for bat
-alias cat 'batcat'
+alias cat 'bat'
 
 # alias for eza
 alias ls 'lo'

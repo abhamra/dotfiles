@@ -197,6 +197,11 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id=r#"discord$"#
+    open-maximized true
+}
+
 // Example: enable rounded corners for all windows.
 window-rule {
     geometry-corner-radius 5

@@ -292,6 +292,8 @@ binds {
     Mod+Q { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
     Mod+Backslash { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "calendar" "toggle"; }
 
+    Mod+N { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "notifications" "toggleHistory"; }
+
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     // Mod+Shift+P { power-off-monitors; }

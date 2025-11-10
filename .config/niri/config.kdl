@@ -4,7 +4,21 @@ gestures {
     }
 }
 
+
+// Set the overview wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
+}
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+}
+
 layout {
+    // Set transparent workspace background color so you see the backdrop at all time.
+    background-color "transparent"
     // Set gaps around windows in logical pixels.
     gaps 8
 
@@ -488,6 +502,7 @@ binds {
     // Move the focused window between the floating and the tiling layout.
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    // Mod+V { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
 
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
@@ -523,19 +538,9 @@ binds {
 
 }
 
-overview {
-    backdrop-color "#000"
-    zoom 0.5
-}
 
 hotkey-overlay {
     skip-at-startup
-}
-
-// Set the overview wallpaper on the backdrop.
-layer-rule {
-  match namespace="^noctalia-overview*"
-  place-within-backdrop true
 }
 
 // spawn-at-startup "ignis" "init"
@@ -543,5 +548,3 @@ layer-rule {
 spawn-at-startup "qs" "-c" "noctalia-shell"
 // TODO: Figure out what rules I can apply to these, for specific windows, etc?
 spawn-at-startup "firefox"
-
-// TODO: Add a command for opening settings

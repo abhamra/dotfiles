@@ -341,6 +341,7 @@ binds {
     Ctrl+Right { spawn "playerctl" "next"; }
     Ctrl+Up { spawn "playerctl" "volume" "0.05+"; }
     Ctrl+Down { spawn "playerctl" "volume" "0.05-"; }
+    Ctrl+Shift+Space { spawn "playerctl" "play-pause"; }
 
     Mod+W { close-window; }
 

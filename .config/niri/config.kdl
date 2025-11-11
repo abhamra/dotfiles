@@ -1,9 +1,12 @@
+// Define workspaces
+workspace "browser"
+workspace "chat/music"
+
 gestures {
     hot-corners {
         off
     }
 }
-
 
 // Set the overview wallpaper on the backdrop.
 layer-rule {
@@ -198,8 +201,23 @@ window-rule {
 }
 
 window-rule {
+    match at-startup=true app-id=r#"firefox$"#
+    open-on-workspace "browser"
+}
+
+window-rule {
     match app-id=r#"discord$"#
     open-maximized true
+}
+
+window-rule {
+    match at-startup=true app-id=r#"discord$"#
+    open-on-workspace "chat/music"
+}
+
+window-rule {
+    match app-id=r#"zathura$"#
+    open-maximized false
 }
 
 // Example: enable rounded corners for all windows.
@@ -298,6 +316,7 @@ binds {
     Mod+Backslash { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "calendar" "toggle"; }
 
     Mod+N { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "notifications" "toggleHistory"; }
+    Mod+Shift+N { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "notifications" "clear"; }
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
@@ -555,3 +574,5 @@ hotkey-overlay {
 spawn-at-startup "qs" "-c" "noctalia-shell"
 // TODO: Figure out what rules I can apply to these, for specific windows, etc?
 spawn-at-startup "firefox"
+// spawn-at-startup "discord"
+spawn-at-startup "flatpak" "run" "com.discordapp.Discord"

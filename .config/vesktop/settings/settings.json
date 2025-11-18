@@ -7,7 +7,8 @@
     ],
     "eagerPatches": false,
     "enabledThemes": [
-        "rosepine.theme.css"
+        "rosepine.theme.css",
+        "system24-rose-pine.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": true,
@@ -97,7 +98,8 @@
         "BetterSettings": {
             "enabled": true,
             "disableFade": true,
-            "eagerLoad": true
+            "eagerLoad": true,
+            "organizeMenu": true
         },
         "BetterUploadButton": {
             "enabled": false
@@ -157,9 +159,6 @@
             "enabled": false
         },
         "DontRoundMyTimestamps": {
-            "enabled": false
-        },
-        "EmoteCloner": {
             "enabled": false
         },
         "Experiments": {
@@ -584,6 +583,15 @@
         },
         "SupportHelper": {
             "enabled": true
+        },
+        "ExpressionCloner": {
+            "enabled": false
+        },
+        "CopyStickerLinks": {
+            "enabled": false
+        },
+        "ImageFilename": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -596,6 +604,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1743727970234
+        "settingsSyncVersion": 1763494613209
     }
 }

@@ -8,6 +8,7 @@ local config = wezterm.config_builder()
 config.font_size = 11
 config.initial_cols = 76
 config.color_scheme = 'rose-pine'
+-- config.color_scheme = 'Gruvbox dark, pale (base16)'
 -- when I want to move from tmux, I will re-enable this!
 config.enable_tab_bar = false
 config.window_background_opacity = 0.9

@@ -195,10 +195,10 @@ animations {
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
-window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
+// window-rule {
+//     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+//     open-floating true
+// }
 
 window-rule {
     match at-startup=true app-id=r#"firefox$"#
@@ -211,7 +211,12 @@ window-rule {
 }
 
 window-rule {
-    match at-startup=true app-id=r#"discord$"#
+    match app-id=r#"vesktop$"#
+    open-maximized true
+}
+
+window-rule {
+    match at-startup=true app-id=r#"vesktop$"#
     open-on-workspace "chat/music"
 }
 
@@ -575,5 +580,5 @@ hotkey-overlay {
 spawn-at-startup "qs" "-c" "noctalia-shell"
 // TODO: Figure out what rules I can apply to these, for specific windows, etc?
 spawn-at-startup "firefox"
-// spawn-at-startup "discord"
-spawn-at-startup "flatpak" "run" "com.discordapp.Discord"
+spawn-at-startup "vesktop"
+// spawn-at-startup "flatpak" "run" "com.discordapp.Discord"

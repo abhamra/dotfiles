@@ -592,6 +592,9 @@
         },
         "ImageFilename": {
             "enabled": false
+        },
+        "DisableDeepLinks": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -604,6 +607,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1763494613209
+        "settingsSyncVersion": 1763505685852
     }
 }

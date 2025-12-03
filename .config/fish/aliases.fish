@@ -1,7 +1,8 @@
 # Alias for git
 alias g 'git'
 alias ga 'git add .'
-alias gcm 'git commit -m'
+# alias gcm 'git commit -m'
+abbr --add gcm --set-cursor 'git commit -m "%"' 
 alias gfo 'git fetch origin'
 
 alias spot 'flatpak run io.github.hrkfdn.ncspot'

@@ -303,7 +303,10 @@
             "enabled": false
         },
         "NoPendingCount": {
-            "enabled": false
+            "enabled": false,
+            "hideFriendRequestsCount": false,
+            "hideMessageRequestsCount": true,
+            "hidePremiumOffersCount": true
         },
         "NoProfileThemes": {
             "enabled": false
@@ -607,6 +610,10 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1763505685852
+        "settingsSyncVersion": 1765222212401
+    },
+    "uiElements": {
+        "chatBarButtons": {},
+        "messagePopoverButtons": {}
     }
 }

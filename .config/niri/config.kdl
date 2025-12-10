@@ -211,6 +211,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"spotify$"#
+    open-maximized true
+}
+
+window-rule {
     match app-id=r#"vesktop$"#
     open-maximized true
 }

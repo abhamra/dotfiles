@@ -35,9 +35,3 @@ require('lsp.cmp-setup')
 
 -- [[ Configure ui ]]
 require("personal.ui")
-
--- [[ Configure autocommands ]]
--- require("personal.autocommands")
-
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et

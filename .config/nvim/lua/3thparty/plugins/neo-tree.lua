@@ -25,8 +25,6 @@ return {
         content_layout = "center",
         sources = {
           { source = "filesystem", display_name = "  File " },
-          { source = "git_status", display_name = "  Git " },
-          { source = "buffers", display_name = " ➜ Buffs " },
         },
       },
       default_component_configs = {
@@ -43,21 +41,6 @@ return {
           folder_open = "",
           folder_empty = "",
           folder_empty_open = "",
-        },
-        git_status = {
-          symbols = {
-            -- Change type
-            added = "",
-            deleted = "",
-            modified = "",
-            renamed = "",
-            -- Status type
-            untracked = "",
-            ignored = "",
-            unstaged = "",
-            staged = "",
-            conflict = "",
-          },
         },
       },
       window = {
@@ -83,22 +66,6 @@ return {
         },
       },
       event_handlers = {
-        {
-          event = "neo_tree_window_after_open",
-          handler = function(args)
-            if args.position == "left" or args.position == "right" then
-              vim.cmd("wincmd =")
-            end
-          end,
-        },
-        {
-          event = "neo_tree_window_after_close",
-          handler = function(args)
-            if args.position == "left" or args.position == "right" then
-              vim.cmd("wincmd =")
-            end
-          end,
-        },
         {
           event = "neo_tree_buffer_enter",
           handler = function(_)

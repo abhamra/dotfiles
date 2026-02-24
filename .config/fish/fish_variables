@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export EDITOR:nvim
 SETUVAR --export EZA_LAAD_OPTIONS:\x2d\x2dall\x1e\x2d\x2dall\x1e\x2d\x2dbinary\x1e\x2d\x2donly\x2ddirs
 SETUVAR --export EZA_LAAID_OPTIONS:\x2d\x2dall\x1e\x2d\x2dall\x1e\x2d\x2dbinary\x1e\x2d\x2dicons\x1e\x2d\x2donly\x2ddirs
 SETUVAR --export EZA_LAAI_OPTIONS:\x2d\x2dall\x1e\x2d\x2dall\x1e\x2d\x2dbinary\x1e\x2d\x2dicons
@@ -74,5 +75,5 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dE6B450
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/asb/projects/xwayland\x2dsatellite/target/release/\x1e/home/asb/\x2eelan/bin\x1e/home/asb/\x2eelan/env\x1e/usr/local/bin\x1e/home/asb/\x2ecargo/bin\x1e/home/arjunbhamra/\x2elocal/bin\x1e/home/arjunbhamra/\x2ecargo/bin\x1e/home/arjunbhamra/\x2espicetify
+SETUVAR fish_user_paths:/home/asb/personal/llvm\x2dbuild/LLVM\x2d21\x2e1\x2e8\x2dLinux\x2dX64/bin\x1e/home/asb/projects/xwayland\x2dsatellite/target/release/\x1e/usr/local/bin\x1e/home/asb/\x2ecargo/bin\x1e/home/arjunbhamra/\x2elocal/bin\x1e/home/arjunbhamra/\x2ecargo/bin\x1e/home/arjunbhamra/\x2espicetify\x1e/home/asb/p/l/LLVM\x2d21\x2e1\x2e8\x2dLinux\x2dX64/bin\x1e/home/asb/\x2eelan/bin/
 SETUVAR zoxide_cmd:cd

@@ -4,7 +4,10 @@
         "x": 0,
         "y": 0,
         "width": 1420,
-        "height": 909
+        "height": 915
     },
-    "displayId": 33
+    "displayId": 33,
+    "updater": {
+        "snoozeUntil": 1768402328310
+    }
 }

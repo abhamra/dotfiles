@@ -211,7 +211,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"spotify$"#
+    match app-id=r#"com.spotify.Client$"#
     open-maximized true
 }
 
@@ -327,6 +327,7 @@ binds {
 
     Mod+N { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "notifications" "toggleHistory"; }
     Mod+Shift+N { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "notifications" "clear"; }
+    Mod+A { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin" "togglePanel" "notes-scratchpad"; }
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
@@ -347,10 +348,10 @@ binds {
     XF86MonBrightnessUp { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
     XF86MonBrightnessDown { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
 
-    Ctrl+Left { spawn "playerctl" "previous"; }
-    Ctrl+Right { spawn "playerctl" "next"; }
-    Ctrl+Up { spawn "playerctl" "volume" "0.05+"; }
-    Ctrl+Down { spawn "playerctl" "volume" "0.05-"; }
+    // Ctrl+Left { spawn "playerctl" "previous"; }
+    // Ctrl+Right { spawn "playerctl" "next"; }
+    // Ctrl+Up { spawn "playerctl" "volume" "0.05+"; }
+    // Ctrl+Down { spawn "playerctl" "volume" "0.05-"; }
     Ctrl+Shift+Space { spawn "playerctl" "play-pause"; }
 
     Mod+W { close-window; }
@@ -585,5 +586,5 @@ hotkey-overlay {
 spawn-at-startup "qs" "-c" "noctalia-shell"
 // TODO: Figure out what rules I can apply to these, for specific windows, etc?
 spawn-at-startup "firefox"
-spawn-at-startup "vesktop"
-// spawn-at-startup "flatpak" "run" "com.discordapp.Discord"
+// spawn-at-startup "vesktop"
+spawn-at-startup "flatpak" "run" "com.discordapp.Discord"

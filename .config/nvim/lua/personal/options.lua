@@ -47,4 +47,7 @@ vim.o.termguicolors = true
 
 vim.o.relativenumber = true
 vim.o.laststatus = 3
+
+vim.api.nvim_set_hl(0, "TabLineSel", { link = "Visual" })
+vim.api.nvim_set_hl(0, "TabLine", { link = "Comment" })
 -- vim: ts=2 sts=2 sw=2 et

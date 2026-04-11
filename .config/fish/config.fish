@@ -6,6 +6,32 @@ function fish_greeting
     # fortune
 end
 
+# mlir-opt and llvm helpers
+function lcmake
+    set branch (git -C ~/personal/llvm-project rev-parse --abbrev-ref HEAD)
+    set build_dir ~/personal/llvm-project/build-$branch
+    
+    sudo cmake -S ~/personal/llvm-project/llvm -B $build_dir -G Ninja \
+        -DLLVM_ENABLE_PROJECTS="clang;mlir;lld" \
+        -DLLVM_TARGETS_TO_BUILD="X86" \
+        -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+        -DLLVM_ENABLE_ASSERTIONS=ON \
+        -DLLVM_CCACHE_BUILD=ON \
+        -DCMAKE_C_COMPILER=clang \
+        -DCMAKE_CXX_COMPILER=clang++ \
+        -DLLVM_USE_LINKER=ld $argv
+end
+
+function lninja
+    set branch (git -C ~/personal/llvm-project rev-parse --abbrev-ref HEAD)
+    sudo ninja -C ~/personal/llvm-project/build-$branch $argv
+end
+
+function pmlir-opt
+    set branch (git -C ~/personal/llvm-project rev-parse --abbrev-ref HEAD)
+    ~/personal/llvm-project/build-$branch/bin/mlir-opt $argv
+end
+
 fish_add_path -p /usr/local/bin
 # for llvm21
 # set -x LLVM_INSTALL_DIR ~/bin/llvm21

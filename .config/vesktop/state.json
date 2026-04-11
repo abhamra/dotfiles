@@ -8,6 +8,7 @@
     },
     "displayId": 33,
     "updater": {
-        "snoozeUntil": 1768402328310
+        "snoozeUntil": 1768402328310,
+        "ignoredVersion": "1.6.5"
     }
 }

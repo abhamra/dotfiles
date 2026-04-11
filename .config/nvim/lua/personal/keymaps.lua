@@ -20,6 +20,10 @@ vim.api.nvim_set_keymap("n", "<leader>to", ":tabonly<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>tl", ":tabn<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>th", ":tabp<CR>", { noremap = true })
 
+for i = 1, 9 do
+  vim.keymap.set("n", "<leader>tg" .. i, i .. "gt", { noremap = true })
+end
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })

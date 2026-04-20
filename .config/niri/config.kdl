@@ -348,10 +348,10 @@ binds {
     XF86MonBrightnessUp { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
     XF86MonBrightnessDown { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
 
-    // Ctrl+Left { spawn "playerctl" "previous"; }
-    // Ctrl+Right { spawn "playerctl" "next"; }
-    // Ctrl+Up { spawn "playerctl" "volume" "0.05+"; }
-    // Ctrl+Down { spawn "playerctl" "volume" "0.05-"; }
+    Ctrl+Left { spawn "playerctl" "previous"; }
+    Ctrl+Right { spawn "playerctl" "next"; }
+    Ctrl+Up { spawn "playerctl" "volume" "0.05+"; }
+    Ctrl+Down { spawn "playerctl" "volume" "0.05-"; }
     Ctrl+Shift+Space { spawn "playerctl" "play-pause"; }
 
     Mod+W { close-window; }

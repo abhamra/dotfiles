@@ -1,10 +1,3 @@
-
-# Hide the cursor while typing
-#
-# Default is `false`
-#
-# hide-cursor-when-typing = false
-
 # Ignore theme selection foreground color
 #
 # Default is false
@@ -13,27 +6,10 @@
 # ignore-selection-foreground-color = false
 
 # Theme
-#
-# It makes Rio look for the specified theme in the themes folder
-# (macos: ~/.config/rio/themes/dracula.toml)
-# (linux: $XDG_HOME_CONFIG/rio/themes/dracula.toml or ~/.config/rio/themes/dracula.toml)
-# (windows: C:\Users\USER\AppData\Local\rio\themes\dracula.toml)
-#
-# Example:
 theme = "rose-pine"
 
 # Margin
-#
-# Define outer margin around the window/tab area using CSS-like syntax
-# [all] - Apply same margin to all sides
-# [top/bottom, left/right] - Apply vertical and horizontal margin
-# [top, right, bottom, left] - Apply individual margin to each side
-# (default is [10])
-#
-# Examples:
-# margin = [10]           # 10px on all sides
-# margin = [10, 5]        # 10px top/bottom, 5px left/right
-# margin = [10, 5, 15, 20] # 10px top, 5px right, 15px bottom, 20px left
+margin = [5]
 
 # Panel Configuration
 #
@@ -55,14 +31,6 @@ theme = "rose-pine"
 # row-gap = 10        # Vertical gap between panels
 # column-gap = 15     # Horizontal gap between panels
 
-# Option as Alt
-#
-# This config only works on MacOS.
-# Possible choices: 'both', 'left' and 'right'.
-#
-# Example:
-# option-as-alt = 'left'
-
 # Line height
 #
 # This option will apply an modifier to line-height
@@ -71,59 +39,21 @@ theme = "rose-pine"
 # Example:
 # line-height = 1.2
 
-# Startup directory
-#
-# Directory the shell is started in. If this is unset the working
-# directory of the parent process will be used.
-#
-# This configuration only has effect if use-fork is disabled.
-#
-# Example:
-# working-dir = "/Users/raphael/Documents/"
-
 # Environment variables
 #
 # Example:
 # env-vars = []
 
-# Use fork
-#
-# Defaults for POSIX-based systems (Windows is not configurable):
-# MacOS: spawn processes
-# Linux/BSD: fork processes
-#
-# Example:
-# use-fork = false
-
-# Confirm before exiting Rio
-# Default is `true`
-#
-# confirm-before-quit = false
+confirm-before-quit = false
 
 # Cursor
-#
-# shape - Default cursor shape is 'block'
-# Other available options are: 'underline', 'beam' or 'hidden'
-#
-# blinking - Whether the cursor blinks. The default is false
-#
-# blinking-interval - Cursor update on milliseconds interval
-#
-# [cursor]
-# shape = 'block'
-# blinking = false
-# blinking-interval = 800
+[cursor]
+shape = 'block'
+blinking = false
 
 # Editor
-#
-# Default editor on Linux and MacOS is "vi",
-# on Windows it is "notepad".
-#
-# Whenever the key binding `OpenConfigEditor` is triggered it will
-# use the value of the editor along with the rio configuration path.
 [editor]
 program = "nvim"
-# args = []
 
 # Window configuration
 #
@@ -160,11 +90,11 @@ program = "nvim"
 #     Default: Not set (uses macOS default positioning)
 #
 # Example:
-# [window]
+[window]
 # width = 600
 # height = 400
 # mode = "windowed"
-# opacity = 1.0
+opacity = 0.9
 # blur = false
 # decorations = "enabled"
 # colorspace = "display-p3"
@@ -227,8 +157,8 @@ program = "nvim"
 # will always look for regular font bounds whene
 #
 # You can also set family on root to overwrite all fonts.
-# [fonts]
-# family = "cascadiamono"
+[fonts]
+family = "Berkeley Mono"
 #
 # You can also specify extra fonts to load
 # [fonts]
@@ -241,40 +171,6 @@ program = "nvim"
 # Note: Font features do not have support to live reload on configuration,
 # so to reflect your changes, you will need to close and reopen Rio.
 #
-# You can also disable font hinting. Font hinting is enabled by default.
-# [fonts]
-# hinting = false
-#
-# You can also map the specified Unicode codepoints to a particular font.
-# [fonts]
-# symbol-map = [
-#   { start = "2297", end = "2299", font-family = "Cascadia Code NF" }
-# ]
-#
-# Simple example:
-# [fonts]
-# size = 18
-#
-# [fonts.regular]
-# family = "cascadiamono"
-# style = "Normal"
-# weight = 400
-#
-# [fonts.bold]
-# family = "cascadiamono"
-# style = "Normal"
-# weight = 800
-#
-# [fonts.italic]
-# family = "cascadiamono"
-# style = "Italic"
-# weight = 400
-#
-# [fonts.bold-italic]
-# family = "cascadiamono"
-# style = "Italic"
-# weight = 800
-
 # Scroll
 #
 # You can change how many lines are scrolled each time by setting this option.
@@ -323,44 +219,9 @@ program = "nvim"
 #
 # Example 1 using fish shell from bin path:
 #
-# [shell]
-# program = "/bin/fish"
-# args = ["--login"]
+[shell]
+program = "/bin/fish"
 #
-# Example 2 for Windows using powershell
-#
-# [shell]
-# program = "pwsh"
-# args = []
-#
-# Example 3 for Windows using powershell with login
-#
-# [shell]
-# program = "pwsh"
-# args = ["-l"]
-#
-# Example 4 for MacOS with tmux installed by homebrew
-#
-# [shell]
-# program = "/opt/homebrew/bin/tmux"
-# args = ["new-session", "-c", "/var/www"]
-
-# Colors
-#
-# Colors definition will overwrite any property in theme
-# (considering if theme folder does exists and is being used)
-#
-# Example:
-# [colors]
-# background = '#0F0D0E'
-# foreground = '#F9F4DA'
-# cursor = '#F38BA3'
-# tabs = '#cccccc'  # Inactive tab text and border color (matches Hyper)
-# tabs-active = '#ffffff'  # Active tab text color (matches Hyper)
-# green = '#0BA95B'
-# red = '#ED203D'
-# blue = '#12B5E5'
-# yellow = '#FCBA28'
 
 # Bindings
 #
@@ -372,34 +233,3 @@ program = "nvim"
 #   # Send escape sequence to clear screen
 #   { key = "l", with = "control", esc = "\u001b[2J\u001b[H" }
 # ]
-
-# Platform
-#
-# Rio now allows you to have different configurations per OS
-# You can write ovewrite properties like `Shell`, `Navigation`
-# and `Window`.
-#
-# Example:
-# [shell]
-# # default (in this case will be used only on MacOS)
-# program = "/bin/fish"
-# args = ["--login"]
-#
-# [platform]
-# # Microsoft Windows overwrite
-# windows.shell.program = "pwsh"
-# windows.shell.args = ["-l"]
-#
-# # Linux overwrite
-# linux.shell.program = "tmux"
-# linux.shell.args = ["new-session", "-c", "/var/www"]
-
-# Log level
-#
-# This property enables log level filter and file. The default level is "OFF" and the logs are not logged to a file as default.
-#
-# Example:
-# [developer]
-# log-level = "OFF"
-# enable-log-file = false
-

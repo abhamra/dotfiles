@@ -4,6 +4,7 @@
 #
 # Example:
 # ignore-selection-foreground-color = false
+copy-on-select = true
 
 # Theme
 theme = "rose-pine"
@@ -48,7 +49,7 @@ confirm-before-quit = false
 
 # Cursor
 [cursor]
-shape = 'block'
+shape = 'underline'
 blinking = false
 
 # Editor
@@ -188,24 +189,8 @@ family = "Berkeley Mono"
 # divider = 1.0
 
 # Navigation
-#
-# "mode" - Define navigation mode
-#   • NativeTab (MacOS only)
-#   • Tab
-#   • Plain
-#
-# "hide-if-single" - Hide navigation UI if is single.
-# "clickable" - Enable click on tabs to switch.
-# "current-working-directory" - Show current working directory in navigation.
-# "color-automation" - Set a specific color for the tab whenever a specific program is running, or in a specific directory.
-#
-# Example:
-# [navigation]
-# mode = "Tab"
-# clickable = false
-# hide-if-single = true
-# current-working-directory = true
-# color-automation = []
+[navigation]
+mode = "Plain"
 
 # Shell
 #

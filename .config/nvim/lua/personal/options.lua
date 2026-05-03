@@ -5,6 +5,9 @@
 vim.o.background = dark;
 
 
+vim.opt.listchars = vim.opt.listchars + { nbsp = "+" }
+vim.g.have_nerd_font = true
+
 -- Set highlight on search
 vim.o.hlsearch = false
 

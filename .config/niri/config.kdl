@@ -585,6 +585,7 @@ hotkey-overlay {
 // spawn-at-startup "swww-daemon"
 spawn-at-startup "qs" "-c" "noctalia-shell"
 // TODO: Figure out what rules I can apply to these, for specific windows, etc?
-spawn-at-startup "firefox"
+// spawn-at-startup "firefox"
+spawn-at-startup "flatpak" "run" "app.zen_browser.zen"
 // spawn-at-startup "vesktop"
 spawn-at-startup "flatpak" "run" "com.discordapp.Discord"

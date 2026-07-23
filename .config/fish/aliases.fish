@@ -21,6 +21,8 @@ alias ls 'lo'
 # venv stuff
 alias v 'source venv/bin/activate.fish'
 
+alias now './scripts/now_page.fish'
+
 # reminder thing
 function remind
     echo "notify-send '$argv[1]' -u critical" | at $argv[2] 2>/dev/null

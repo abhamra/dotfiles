@@ -137,3 +137,21 @@ echo "Reset now.md with today's date ($today)"
 
 set new_blank_line (math $frontmatter_end + 5)
 nvim +$new_blank_line $NOW_FILE
+
+# ================= 4. Commit (and push) the changes =================
+ 
+set original_dir (pwd)
+cd $SITE_ROOT
+ 
+set commit_date (date "+%Y-%m-%d")
+git add content/now.md content/now-then.md
+git commit -m "Update now page ($commit_date)"
+ 
+read -P "Push to remote? [y/N] " do_push
+if test "$do_push" = "y" -o "$do_push" = "Y"
+    git push
+else
+    echo "Skipped push — commit is local only."
+end
+ 
+cd $original_dir

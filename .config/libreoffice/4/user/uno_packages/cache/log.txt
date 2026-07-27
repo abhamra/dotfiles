@@ -1,0 +1,2 @@
+ERROR: Exception occurred: There is no such extension deployed: org.Zotero.integration.openoffice
+ERROR: unopkg failed.

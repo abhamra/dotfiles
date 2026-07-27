@@ -1,6 +1,7 @@
 // Define workspaces
 workspace "browser"
-workspace "chat/music"
+workspace "chat and misc"
+workspace "research"
 
 gestures {
     hot-corners {
@@ -206,7 +207,13 @@ window-rule {
 }
 
 window-rule {
+    match at-startup=true app-id=r#"firefox$"#
+    open-on-workspace "browser"
+}
+
+window-rule {
     match app-id=r#"discord$"#
+    open-on-workspace "chat and music"
     open-maximized true
 }
 
@@ -216,18 +223,32 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"vesktop$"#
+    match at-startup=true app-id=r#"vesktop$"#
     open-maximized true
+    open-on-workspace "chat and music"
 }
 
 window-rule {
-    match at-startup=true app-id=r#"vesktop$"#
-    open-on-workspace "chat/music"
+    match at-startup=true app-id=r#"gfeeds$"#
+    open-on-workspace "chat and misc"
+    open-maximized true
 }
 
 window-rule {
     match app-id=r#"zathura$"#
     open-maximized false
+}
+
+window-rule {
+    match at-startup=true app-id=r#"obsidian$"#
+    open-on-workspace "research"
+    open-maximized true
+}
+
+window-rule {
+    match at-startup=true app-id=r#"zotero$"#
+    open-on-workspace "research"
+    open-maximized true
 }
 
 // Example: enable rounded corners for all windows.
@@ -595,3 +616,5 @@ spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "flatpak" "run" "app.zen_browser.zen"
 // spawn-at-startup "vesktop"
 spawn-at-startup "flatpak" "run" "com.discordapp.Discord"
+spawn-at-startup "flatpak" "run" "md.obsidian.Obsidian"
+spawn-at-startup "zotero"

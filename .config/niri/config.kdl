@@ -229,24 +229,25 @@ window-rule {
 }
 
 window-rule {
-    match at-startup=true app-id=r#"gfeeds$"#
+    match app-id=r#"gfeeds$"#
     open-on-workspace "chat and misc"
     open-maximized true
 }
 
 window-rule {
     match app-id=r#"zathura$"#
+    open-on-workspace "research"
     open-maximized false
 }
 
 window-rule {
-    match at-startup=true app-id=r#"obsidian$"#
+    match app-id=r#"obsidian$"#
     open-on-workspace "research"
     open-maximized true
 }
 
 window-rule {
-    match at-startup=true app-id=r#"zotero$"#
+    match app-id=r#"zotero$"#
     open-on-workspace "research"
     open-maximized true
 }

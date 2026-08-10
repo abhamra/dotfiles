@@ -82,4 +82,4 @@ diff_chunk_func.bold=true
 diff_add.fg=#524f67
 diff_del.fg=#eb6f92
 quote_*.fg=#908caa
-quote_1.fg=#21202e
+quote_1.fg=#5b5874

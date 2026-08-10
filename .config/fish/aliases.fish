@@ -12,6 +12,8 @@ alias piv 'pip install -v .'
 # Alias nvim for vim
 alias vim 'nvim'
 
+alias mail 'aerc'
+
 # Alias for bat
 alias cat 'bat'
 

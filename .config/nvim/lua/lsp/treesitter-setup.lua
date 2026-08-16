@@ -10,7 +10,8 @@ vim.defer_fn(function()
     auto_install = false,
     ignore_install = { "latex" },
 
-    highlight = { enable = true, disable = { "markdown" }, },
+    -- disable = { "markdown" },
+    highlight = { enable = true, },
     indent = { enable = true },
     incremental_selection = {
       enable = true,

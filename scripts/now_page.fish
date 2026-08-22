@@ -8,19 +8,27 @@
 # write the new entry.
 #
 # now.md format (frontmatter uses +++, unaffected):
+#
 #   *Updated <date>*, old updates at [/now-then](/now-then).
+#
 #   ---
+#
 #   <body>
+#
 #   ---
+#
 #   <Sivers footer>
 #
 # now-then.md format (single separator — no leading '---' before the
 # ratfactor intro line anymore):
 #   This was inspired by [ratfactor](...)'s [/now-then](...) page!
 #   ---
+#
 #   ### *<date>*
+#
 #   <entry>
 #   ### *<date>*
+#
 #   <entry>
 #   ...
 
@@ -67,9 +75,10 @@ if test -z "$old_date"; or test "$old_date" = "$updated_line"
     exit 1
 end
 
-# --- Grab the body text (everything strictly between sep1 and sep2) ---
-set body_start (math $sep1 + 1)
-set body_end (math $sep2 - 1)
+# --- Grab the body text (everything strictly between sep1 and sep2, trimmed of
+#     the single leading/trailing blank line that pads the separators) ---
+set body_start (math $sep1 + 2)
+set body_end (math $sep2 - 2)
 set body_text (sed -n "$body_start,$body_end p" $NOW_FILE)
 
 if test -z "$body_text"
@@ -77,7 +86,7 @@ if test -z "$body_text"
 end
 
 # --- Everything after sep2 (the footer / Sivers credit block) — kept as-is in now.md ---
-set footer_start (math $sep2 + 1)
+set footer_start (math $sep2 + 2)
 set footer_text (sed -n "$footer_start,\$p" $NOW_FILE)
 
 # --- Everything up through the frontmatter's closing +++ in now.md — kept as-is ---
@@ -100,8 +109,10 @@ set tmp_nowthen (mktemp)
 # lines 1..insert_after unchanged (frontmatter, intro line, the '---')
 sed -n "1,$insert_after p" $NOW_THEN_FILE > $tmp_nowthen
 
-# new archived entry
+# new archived entry — blank line before the header, then header, blank, body
+echo "" >> $tmp_nowthen
 echo "### *$old_date*" >> $tmp_nowthen
+echo "" >> $tmp_nowthen
 for line in $body_text
     echo $line >> $tmp_nowthen
 end
@@ -122,11 +133,15 @@ set tmp_now (mktemp)
 for line in $frontmatter_text
     echo $line >> $tmp_now
 end
+echo "" >> $tmp_now
 echo "*Updated $today*, old updates at [/now-then](/now-then)." >> $tmp_now
+echo "" >> $tmp_now
 echo "---" >> $tmp_now
 echo "" >> $tmp_now
 echo "" >> $tmp_now
+echo "" >> $tmp_now
 echo "---" >> $tmp_now
+echo "" >> $tmp_now
 for line in $footer_text
     echo $line >> $tmp_now
 end
@@ -138,14 +153,18 @@ echo "Reset now.md with today's date ($today)"
 #
 # now.md now looks like:
 #   1..frontmatter_end        frontmatter (+++ ... +++)
-#   frontmatter_end + 1       *Updated <date>* line
-#   frontmatter_end + 2       ---              <- first separator
-#   frontmatter_end + 3       (blank)          <- cursor lands here
-#   frontmatter_end + 4       (blank)
-#   frontmatter_end + 5       ---
+#   frontmatter_end + 1       (blank)
+#   frontmatter_end + 2       *Updated <date>* line
+#   frontmatter_end + 3       (blank)
+#   frontmatter_end + 4       ---              <- first separator
+#   frontmatter_end + 5       (blank)
+#   frontmatter_end + 6       (blank)          <- cursor lands here
+#   frontmatter_end + 7       (blank)
+#   frontmatter_end + 8       ---
+#   frontmatter_end + 9       (blank)
 #   ...                       footer
 
-set new_blank_line (math $frontmatter_end + 3)
+set new_blank_line (math $frontmatter_end + 6)
 nvim +$new_blank_line $NOW_FILE
 
 # ================= 4. Commit (and push) the changes =================

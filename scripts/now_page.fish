@@ -6,6 +6,10 @@
 # first, right after the ratfactor intro block), then resets now.md
 # with today's date and an empty body, and opens nvim so you can
 # write the new entry.
+#
+# NOTE: now.md now has only ONE '---' separator (the one right before
+# the footer/credit block) since the leading one is injected by the
+# template instead of living in the content file.
 
 # ---- CONFIG: adjust this to your site's content directory ----
 set SITE_ROOT ~/personal/personalsite
@@ -22,16 +26,15 @@ if not test -f $NOW_THEN_FILE
     exit 1
 end
 
-# --- Find the two '---' body separators in now.md (frontmatter uses +++, so these are unambiguous) ---
+# --- Find the single '---' body separator in now.md (frontmatter uses +++, so this is unambiguous) ---
 set sep_lines (grep -n '^---$' $NOW_FILE | cut -d: -f1)
 
-if test (count $sep_lines) -lt 2
-    echo "Error: couldn't find two '---' separators in now.md. Aborting."
+if test (count $sep_lines) -lt 1
+    echo "Error: couldn't find a '---' separator in now.md. Aborting."
     exit 1
 end
 
 set sep1 $sep_lines[1]
-set sep2 $sep_lines[2]
 
 # --- Pull the old date out of the "*Updated ...*" line. Search for it by
 #     pattern (anywhere above sep1) rather than assuming it's exactly one
@@ -39,7 +42,7 @@ set sep2 $sep_lines[2]
 set updated_line_num (sed -n "1,$sep1 p" $NOW_FILE | grep -n '^\*Updated ' | tail -n1 | cut -d: -f1)
 
 if test -z "$updated_line_num"
-    echo "Error: couldn't find a line starting with '*Updated ' before the first '---' separator (line $sep1)."
+    echo "Error: couldn't find a line starting with '*Updated ' before the '---' separator (line $sep1)."
     echo "--- Lines 1 through $sep1 of $NOW_FILE, for reference: ---"
     sed -n "1,$sep1 p" $NOW_FILE | cat -A | head -30
     exit 1
@@ -54,17 +57,17 @@ if test -z "$old_date"; or test "$old_date" = "$updated_line"
     exit 1
 end
 
-# --- Grab the body text (everything strictly between sep1 and sep2) ---
-set body_start (math $sep1 + 1)
-set body_end (math $sep2 - 1)
+# --- Grab the body text (everything strictly between the "*Updated" line and sep1) ---
+set body_start (math $updated_line_num + 1)
+set body_end (math $sep1 - 1)
 set body_text (sed -n "$body_start,$body_end p" $NOW_FILE)
 
 if test -z "$body_text"
     echo "Warning: current now.md body looks empty — nothing to archive?"
 end
 
-# --- Everything after sep2 (the footer / Sivers credit block) — kept as-is in now.md ---
-set footer_start (math $sep2 + 1)
+# --- Everything after sep1 (the footer / Sivers credit block) — kept as-is in now.md ---
+set footer_start (math $sep1 + 1)
 set footer_text (sed -n "$footer_start,\$p" $NOW_FILE)
 
 # --- Everything up through the frontmatter's closing +++ in now.md — kept as-is ---
@@ -72,6 +75,7 @@ set frontmatter_end (grep -n '^+++$' $NOW_FILE | sed -n '2p' | cut -d: -f1)
 set frontmatter_text (sed -n "1,$frontmatter_end p" $NOW_FILE)
 
 # ================= 1. Archive into now-then.md =================
+# (unchanged — now-then.md still uses its own two-separator intro block)
 
 set nowthen_seps (grep -n '^---$' $NOW_THEN_FILE | cut -d: -f1)
 if test (count $nowthen_seps) -lt 2
@@ -110,8 +114,6 @@ for line in $frontmatter_text
 end
 echo "*Updated $today*, old updates at [/now-then](/now-then)." >> $tmp_now
 echo "" >> $tmp_now
-echo "---" >> $tmp_now
-echo "" >> $tmp_now
 echo "" >> $tmp_now
 echo "" >> $tmp_now
 echo "---" >> $tmp_now
@@ -128,30 +130,29 @@ echo "Reset now.md with today's date ($today)"
 #   1..frontmatter_end        frontmatter (+++ ... +++)
 #   frontmatter_end + 1       *Updated <date>* line
 #   frontmatter_end + 2       (blank)
-#   frontmatter_end + 3       ---              <- first separator
+#   frontmatter_end + 3       (blank)          <- cursor lands here
 #   frontmatter_end + 4       (blank)
-#   frontmatter_end + 5       (blank)          <- cursor lands here
-#   frontmatter_end + 6       (blank)
-#   frontmatter_end + 7       ---
+#   frontmatter_end + 5       ---
 #   ...                       footer
 
-set new_blank_line (math $frontmatter_end + 5)
+set new_blank_line (math $frontmatter_end + 3)
 nvim +$new_blank_line $NOW_FILE
 
 # ================= 4. Commit (and push) the changes =================
- 
+
 set original_dir (pwd)
 cd $SITE_ROOT
- 
+
 set commit_date (date "+%Y-%m-%d")
 git add content/now.md content/now-then.md
 git commit -m "Update now page ($commit_date)"
- 
+
 read -P "Push to remote? [y/N] " do_push
 if test "$do_push" = "y" -o "$do_push" = "Y"
     git push
 else
     echo "Skipped push — commit is local only."
 end
- 
+
 cd $original_dir
+

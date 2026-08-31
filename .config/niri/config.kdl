@@ -207,18 +207,19 @@ window-rule {
 }
 
 window-rule {
-    match at-startup=true app-id=r#"firefox$"#
+    match at-startup=true app-id=r#"app.zen_browser.zen$"#
     open-on-workspace "browser"
 }
 
 window-rule {
-    match app-id=r#"discord$"#
+    match app-id=r#"com.discordapp.Discord$"#
     open-on-workspace "chat and music"
     open-maximized true
 }
 
 window-rule {
     match app-id=r#"com.spotify.Client$"#
+    open-on-workspace "chat and music"
     open-maximized true
 }
 
@@ -241,7 +242,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"obsidian$"#
+    match app-id=r#"md.obsidian.Obsidian$"#
     open-on-workspace "research"
     open-maximized true
 }
@@ -619,3 +620,5 @@ spawn-at-startup "flatpak" "run" "app.zen_browser.zen"
 spawn-at-startup "flatpak" "run" "com.discordapp.Discord"
 spawn-at-startup "flatpak" "run" "md.obsidian.Obsidian"
 spawn-at-startup "zotero"
+spawn-at-startup "gfeeds"
+spawn-at-startup "fish" "-c" "~/.config/niri/scripts/monitor_listener.fish"

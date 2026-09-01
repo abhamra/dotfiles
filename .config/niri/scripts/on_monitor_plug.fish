@@ -1,25 +1,22 @@
 #!/usr/bin/env fish
 
-# Target external monitor name
 set TARGET_MONITOR "DP-2"
-set TARGET_WORKSPACE "research"
+set TARGET_WORKSPACE_NAME "research"
 
-# Get window IDs belonging to windows on the 'research' workspace
-set window_ids (niri msg --json windows | jq -r ".[] | select(.workspace_id == \"$TARGET_WORKSPACE\") | .id")
+# 1. Resolve workspace ID for research
+set target_ws_id (niri msg --json workspaces | jq -r ".[] | select(.name == \"$TARGET_WORKSPACE_NAME\") | .id")
 
-if test -n "$window_ids"
-    # Save currently focused window ID to restore focus later
-    set initial_focus (niri msg --json focused-window | jq -r '.id // empty')
+# 2. Focus research workspace and ensure it resides on DP-2
+niri msg action focus-workspace "$TARGET_WORKSPACE_NAME"
+niri msg action move-workspace-to-monitor "$TARGET_MONITOR"
 
-    for id in $window_ids
-        # Focus window so operations apply to its column
-        niri msg action focus-window --id $id
-        # Move column to the external monitor
-        niri msg action move-column-to-monitor $TARGET_MONITOR
-    end
+# 3. Move any existing columns matching research apps to DP-2
+set window_ids (niri msg --json windows | jq -r '.[] | select(.app_id != null and (.app_id | test("zathura|md.obsidian.Obsidian|org.zotero.Zotero"; "i"))) | .id')
 
-    # Restore initial focus if it existed
-    if test -n "$initial_focus"
-        niri msg action focus-window --id $initial_focus
-    end
+for id in $window_ids
+    niri msg action focus-window --id $id
+    niri msg action move-column-to-monitor $TARGET_MONITOR
 end
+
+# Return focus to primary workspace on laptop screen
+niri msg action focus-workspace "browser"

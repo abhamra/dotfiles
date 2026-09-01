@@ -30,6 +30,7 @@ function remind
     echo "notify-send '$argv[1]' -u critical" | at $argv[2] 2>/dev/null
 end
 
+alias zz '$HOME/scripts/zotero_zathura.fish'
 
 # TMUX ALIASES #
 

@@ -1,7 +1,9 @@
 // Define workspaces
 workspace "browser"
 workspace "chat and misc"
-workspace "research"
+workspace "research" {
+    open-on-output "DP-2"
+}
 
 gestures {
     hot-corners {

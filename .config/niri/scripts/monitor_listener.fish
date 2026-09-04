@@ -5,7 +5,7 @@ set STATE_FILE "/tmp/niri_monitor_state"
 
 # for when we connect to DP-2
 function get_dp2_status
-    niri msg --json outputs | jq -e 'has("DP-2")' >/dev/null
+    niri msg --json outputs | jq -e 'has("DP-")' >/dev/null
     return $status
 end
 
@@ -27,13 +27,13 @@ niri msg --json event-stream | while read -l line
         if get_dp2_status
             if test "$last_state" != "connected"
                 echo "connected" > $STATE_FILE
-                echo "[Niri Layout] DP-2 Connected. Executing plug handler..."
+                echo "[Niri Layout] DP Connected. Executing plug handler..."
                 ~/.config/niri/scripts/on_monitor_plug.fish
             end
         else
             if test "$last_state" != "disconnected"
                 echo "disconnected" > $STATE_FILE
-                echo "[Niri Layout] DP-2 Disconnected. Executing unplug handler..."
+                echo "[Niri Layout] DP Disconnected. Executing unplug handler..."
                 ~/.config/niri/scripts/on_monitor_unplug.fish
             end
         end

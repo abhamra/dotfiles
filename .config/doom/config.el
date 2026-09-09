@@ -6,8 +6,12 @@
 (setq-default explicit-shell-file-name "/usr/bin/fish")
 
 ;; For vim escape binds
-(setq evil-escape-key-sequence "jk")
-(setq evil-escape-key-sequence "kj")
+;; Configure evil-escape after the package loads
+(after! evil-escape
+  (setq evil-escape-key-sequence "jk")
+  (setq evil-escape-unordered-key-sequence t) ; Allows 'kj' to work identically to 'jk'
+  (setq evil-escape-delay 0.15)               ; Max time delay (seconds) between keypresses
+  (evil-escape-mode 1))
 
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 

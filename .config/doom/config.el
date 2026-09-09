@@ -5,6 +5,10 @@
 (setq-default vterm-shell "/usr/bin/fish")
 (setq-default explicit-shell-file-name "/usr/bin/fish")
 
+;; For vim escape binds
+(setq evil-escape-key-sequence "jk")
+(setq evil-escape-key-sequence "kj")
+
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom

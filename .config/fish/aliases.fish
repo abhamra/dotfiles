@@ -32,6 +32,8 @@ end
 
 alias zz '$HOME/scripts/zotero_zathura.fish'
 
+alias doom '~/.emacs.d/bin/doom'
+
 # TMUX ALIASES #
 
 # tmux reattach named

@@ -33,6 +33,7 @@ function pmlir-opt
 end
 
 fish_add_path -p /usr/local/bin
+fish_add_path ~/.emacs.d/bin
 # for llvm21
 # set -x LLVM_INSTALL_DIR ~/bin/llvm21
 # set -x $PATH PATH "$LLVM_INSTALL_DIR/bin"
@@ -43,6 +44,8 @@ set -g man_bold -o 31748f     # pine (blue-green)
 set -g man_standout -b 191724 908caa  # base background, subtle foreground
 set -g man_underline -u 9ccfd8  # foam (cyan-like)
 set -Ux MANPAGER 'nvim +Man!'
+
+set -gx DOOMDIR ~/.config/doom
 
 set -Ux EDITOR nvim
 

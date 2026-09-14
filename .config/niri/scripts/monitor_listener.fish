@@ -5,7 +5,7 @@ set STATE_FILE "/tmp/niri_monitor_state"
 
 # for when we connect to DP-2
 function get_dp2_status
-    niri msg --json outputs | jq -e 'has("DP-")' >/dev/null
+    niri msg --json outputs | jq -e 'has("DP-3")' >/dev/null
     return $status
 end
 

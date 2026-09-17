@@ -239,7 +239,6 @@ window-rule {
 
 window-rule {
     match app-id=r#"zathura$"#
-    open-on-workspace "research"
     open-maximized false
 }
 

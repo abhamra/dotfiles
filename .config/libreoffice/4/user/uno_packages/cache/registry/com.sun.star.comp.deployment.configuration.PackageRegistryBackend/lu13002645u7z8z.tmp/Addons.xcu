@@ -123,16 +123,16 @@
 				</prop>
 				<node oor:name="UserDefinedImages">
 					<prop oor:name="ImageSmallURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditCitation_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditCitation_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditCitation_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditCitation_26.png</value>
 					</prop>
 					<prop oor:name="ImageSmallHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditCitation_dark_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditCitation_dark_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditCitation_dark_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditCitation_dark_26.png</value>
 					</prop>
 				</node>
 			</node>
@@ -142,16 +142,16 @@
 				</prop>
 				<node oor:name="UserDefinedImages">
 					<prop oor:name="ImageSmallURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addAnnotation_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addAnnotation_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addAnnotation_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addAnnotation_26.png</value>
 					</prop>
 					<prop oor:name="ImageSmallHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addAnnotation_dark_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addAnnotation_dark_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addAnnotation_dark_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addAnnotation_dark_26.png</value>
 					</prop>
 				</node>
 			</node>
@@ -161,16 +161,16 @@
 				</prop>
 				<node oor:name="UserDefinedImages">
 					<prop oor:name="ImageSmallURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addNote_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addNote_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addNote_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addNote_26.png</value>
 					</prop>
 					<prop oor:name="ImageSmallHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addNote_dark_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addNote_dark_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addNote_dark_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addNote_dark_26.png</value>
 					</prop>
 				</node>
 			</node>
@@ -180,16 +180,16 @@
 				</prop>
 				<node oor:name="UserDefinedImages">
 					<prop oor:name="ImageSmallURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditBibliography_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditBibliography_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditBibliography_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditBibliography_26.png</value>
 					</prop>
 					<prop oor:name="ImageSmallHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditBibliography_dark_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditBibliography_dark_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditBibliography_dark_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/addEditBibliography_dark_26.png</value>
 					</prop>
 				</node>
 			</node>
@@ -199,16 +199,16 @@
 				</prop>
 				<node oor:name="UserDefinedImages">
 					<prop oor:name="ImageSmallURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/setDocPrefs_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/setDocPrefs_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/setDocPrefs_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/setDocPrefs_26.png</value>
 					</prop>
 					<prop oor:name="ImageSmallHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/setDocPrefs_dark_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/setDocPrefs_dark_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/setDocPrefs_dark_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/setDocPrefs_dark_26.png</value>
 					</prop>
 				</node>
 			</node>
@@ -218,16 +218,16 @@
 				</prop>
 				<node oor:name="UserDefinedImages">
 					<prop oor:name="ImageSmallURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/refresh_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/refresh_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/refresh_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/refresh_26.png</value>
 					</prop>
 					<prop oor:name="ImageSmallHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/refresh_dark_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/refresh_dark_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/refresh_dark_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/refresh_dark_26.png</value>
 					</prop>
 				</node>
 			</node>
@@ -237,16 +237,16 @@
 				</prop>
 				<node oor:name="UserDefinedImages">
 					<prop oor:name="ImageSmallURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/removeCodes_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/removeCodes_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/removeCodes_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/removeCodes_26.png</value>
 					</prop>
 					<prop oor:name="ImageSmallHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/removeCodes_dark_16.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/removeCodes_dark_16.png</value>
 					</prop>
 					<prop oor:name="ImageBigHCURL">
-						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu5774241ni71z.tmp_/Zotero_LibreOffice_Integration.oxt/icons/removeCodes_dark_26.png</value>
+						<value>vnd.sun.star.expand:$UNO_USER_PACKAGES_CACHE/uno_packages/lu13002645u7z8y.tmp_/Zotero_LibreOffice_Integration.oxt/icons/removeCodes_dark_26.png</value>
 					</prop>
 				</node>
 			</node>

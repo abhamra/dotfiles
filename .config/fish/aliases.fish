@@ -22,6 +22,7 @@ alias ls 'lo'
 
 # venv stuff
 alias v 'source venv/bin/activate.fish'
+alias cv 'python3 -m venv venv'
 
 alias now './scripts/now_page.fish'
 

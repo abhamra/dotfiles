@@ -75,6 +75,7 @@
       fortune
       cowsay
       nodejs
+      luarocks
     ];
     shell = pkgs.fish;
   };

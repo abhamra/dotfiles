@@ -9,13 +9,13 @@ Ensure you have the following installed on your system
 ### Git
 
 ```
-sudo apt-get install git-all
+sudo dnf install git-all
 ```
 
 ### GNU Stow
 
 ```
-sudo apt-get install stow
+sudo dnf install stow
 ```
 
 ## Installation
@@ -30,14 +30,16 @@ $ cd dotfiles
 then use GNU stow to create symlinks
 
 ```
-$ stow .
+$ stow -t ~ common
+$ stow -t ~ laptop
+```
+
+If on the home server, use the `/` directory instead of `$HOME` aka `~`.
+```
+$ stow -t / homeserver
 ```
 
 The idea for using stow was from the Youtube channel "Dreams of Autonomy"; their video is [here](https://www.youtube.com/watch?v=y6XCebnB9gs).
 
 Make sure to add command line stuff like fzf and bat, etc., from the video [here](https://www.youtube.com/watch?v=mmqDYw9C30I&ab_channel=JoseanMartinez).
 **NOTE**: Don't forget to also install `lua5.1, liblua5.1-dev`, and `luarocks` to enable `lean.nvim`.
-
-Also, note that Oh My Posh is also quite nice, and I really like how it works with the rest of the set-up!
-For future reference, try to use zsh on any new machines instead of bash; it maintains a lot of features but p10k and a lot of other native features
-make it a more attractive pick across the board.

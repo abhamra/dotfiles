@@ -133,8 +133,8 @@
 	  enable = true;
 	  settings = {
 		  # Stop charging when battery reaches 80% (or lower, like 60% for pure desktop/server use)
-		  START_CHARGE_THRESH_BAT0 = 75;
-		  STOP_CHARGE_THRESH_BAT0 = 80;
+		  START_CHARGE_THRESH_BAT0 = 55;
+		  STOP_CHARGE_THRESH_BAT0 = 60;
 	  };
   };
 

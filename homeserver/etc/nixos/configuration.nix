@@ -74,6 +74,7 @@
       fastfetch
       fortune
       cowsay
+      nodejs
     ];
     shell = pkgs.fish;
   };

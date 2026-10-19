@@ -139,6 +139,7 @@
   };
 
   services.tailscale.enable = true;
+  services.tailscale.extraSetFlags = [ "--operator=arjun" ];
   networking.firewall = {
     enable = true;
     

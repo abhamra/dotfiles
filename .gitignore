@@ -17,4 +17,5 @@
 /.config/vesktop/*
 .config/enchant/*
 .config/spicetify
+common/.config/fish/fish_variables
 luarocks-3.12.2/

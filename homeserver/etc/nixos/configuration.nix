@@ -65,7 +65,7 @@
     isNormalUser = true;
     description = "Arjun";
     extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
-    openssh.authorizedKeys.keys = [ "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCfXe7MjygvnjTMQ6UfTFi3xK07SivQdA7Kd76kW7QwYAUJfpMBYl7kYgWOnkjd/V6k9J2PS/X1EWPGEipWBw9fzPbFGajPA2G+k0Jx6KCSXe/Bk1XKJwxYO+LfNmBmZ0/IXJmwVpzoBycpubUCFIowIvwzDy5SjxStvCZ/5KBdTkDdqVv1dbuStkq2EmO6s7SrBQ60M6NSj0O5CU58RJEu/77bQ4JeqyCv1UyASf+G4ZFsNSYbjFm8sH6cnYmfcQNhghjPk4oRXMPGWIotpYijxZxClQKpoXOnkxIKuLMhtq82lwI8xHZ1mWqnXSRr4KVY/fV6t5boE0paL/Xv080f asb@pc" ];
+    openssh.authorizedKeys.keys = [ (lib.removeSuffix "\n" (builtins.readFile ./secrets/server_key.pub)) ];
     packages = with pkgs; [
       tree
       gcc

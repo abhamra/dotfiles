@@ -38,6 +38,5 @@ SETUVAR _fisher_plttn_2F_fish_2D_eza_files:\x7e/\x2econfig/fish/functions/eza_gi
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1erose\x2dpine/fish\x1ekidonng/zoxide\x2efish\x1eplttn/fish\x2deza\x1epatrickf1/fzf\x2efish\x1edecors/fish\x2dcolored\x2dman
 SETUVAR _fisher_rose_2D_pine_2F_fish_files:\x7e/\x2econfig/fish/themes/Ros\u00e9\x20Pine\x20Dawn\x2etheme\x1e\x7e/\x2econfig/fish/themes/Ros\u00e9\x20Pine\x20Moon\x2etheme\x1e\x7e/\x2econfig/fish/themes/Ros\u00e9\x20Pine\x2etheme
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_user_paths:/home/asb/\x2eemacs\x2ed/bin\x1e/home/asb/personal/llvm\x2dbuild/LLVM\x2d21\x2e1\x2e8\x2dLinux\x2dX64/bin\x1e/home/asb/projects/xwayland\x2dsatellite/target/release/\x1e/usr/local/bin\x1e/home/asb/\x2ecargo/bin\x1e/home/arjunbhamra/\x2elocal/bin\x1e/home/arjunbhamra/\x2ecargo/bin\x1e/home/arjunbhamra/\x2espicetify\x1e/home/asb/p/l/LLVM\x2d21\x2e1\x2e8\x2dLinux\x2dX64/bin\x1e/home/asb/\x2eelan/bin/
 SETUVAR zoxide_cmd:cd

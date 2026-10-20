@@ -2,6 +2,9 @@
 fish_config theme choose "Rosé Pine"
 
 function fish_greeting
+    if test (hostname) = "homeserver";
+        fastfetch
+    end
     # fastfetch
     # fortune
 end

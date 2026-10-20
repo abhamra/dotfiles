@@ -93,6 +93,7 @@
     btop
     tmux
     lm_sensors
+    unzip
     neovim
     fzf
     fish

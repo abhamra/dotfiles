@@ -76,6 +76,7 @@
       cowsay
       nodejs
       luarocks
+      syncthing
     ];
     shell = pkgs.fish;
   };
@@ -112,6 +113,20 @@
   # };
 
   # List services that you want to enable:
+  services.syncthing = {
+    enable = true;
+    user = "arjun";
+    dataDir = "/home/arjun";
+    configDir = "/home/arjun/.config/syncthing";
+    guiAddress = "127.0.0.1:8384";   # not exposed; reach it via SSH tunnel
+    openDefaultPorts = false;
+  };
+
+  # sync traffic only over the tailnet interface
+  networking.firewall.interfaces."tailscale0" = {
+    allowedTCPPorts = [ 22000 ];
+    allowedUDPPorts = [ 22000 ];
+  };
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

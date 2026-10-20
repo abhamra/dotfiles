@@ -175,7 +175,7 @@
     wantedBy = [ "default.target" ];
     after = [ "network.target" ];
     serviceConfig = {
-      ExecStart = "${pkgs.tailscale}/bin/tailscale file get --loop --conflict=rename /home/your-username/Downloads";
+      ExecStart = "${pkgs.tailscale}/bin/tailscale file get --loop --conflict=rename /home/arjun/drive";
       Restart = "always";
       RestartSec = "5s";
     };

@@ -1,3 +1,27 @@
+if test (hostname) = "homeserver";
+    alias battery 'sudo tlp-stat -b'
+    alias switch 'sudo nixos-rebuild switch'
+end
+if test (hostname) = "pc";
+    alias mail 'aerc'
+    alias now './scripts/now_page.fish'
+
+    # reminder thing
+    function remind
+        echo "notify-send '$argv[1]' -u critical" | at $argv[2] 2>/dev/null
+    end
+
+    alias doom '~/.emacs.d/bin/doom'
+
+    alias zz '$HOME/scripts/zotero_zathura.fish'
+
+    # for downloads
+    function download
+        sudo dpkg -i "$argv[1]"
+    end
+
+    alias zola 'flatpak run org.getzola.zola'
+end
 # Alias for git
 alias g 'git'
 alias ga 'git add .'
@@ -5,35 +29,20 @@ alias ga 'git add .'
 abbr --add gcm --set-cursor 'git commit -m "%"' 
 alias gfo 'git fetch origin'
 
-alias spot 'flatpak run io.github.hrkfdn.ncspot'
-
 alias piv 'pip install -v .'
 
 # Alias nvim for vim
 alias vim 'nvim'
 
-alias mail 'aerc'
-
 # Alias for bat
 alias cat 'bat'
 
 # alias for eza
-alias ls 'lo'
+alias ls 'eza'
 
 # venv stuff
 alias v 'source venv/bin/activate.fish'
 alias cv 'python3 -m venv venv'
-
-alias now './scripts/now_page.fish'
-
-# reminder thing
-function remind
-    echo "notify-send '$argv[1]' -u critical" | at $argv[2] 2>/dev/null
-end
-
-alias zz '$HOME/scripts/zotero_zathura.fish'
-
-alias doom '~/.emacs.d/bin/doom'
 
 # TMUX ALIASES #
 
@@ -59,12 +68,5 @@ alias tkser 'tmux kill-server'
 
 alias tmux 'tmux -2'
 
-# for downloads
-function download
-    sudo dpkg -i "$argv[1]"
-end
-
 # Alias for zoxide
 alias cd 'z'
-
-alias zola 'flatpak run org.getzola.zola'

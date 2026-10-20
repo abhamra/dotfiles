@@ -1,6 +1,7 @@
 if test (hostname) = "homeserver";
-    alias battery 'sudo tlp-stat -b'
-    alias switch 'sudo nixos-rebuild switch'
+    alias battery 'acpi -b'
+    alias rebuild 'sudo nixos-rebuild switch'
+    alias nixconf 'vim ~/dotfiles/homeserver/etc/nixos/configuration.nix'
 end
 if test (hostname) = "pc";
     alias mail 'aerc'

@@ -1,4 +1,4 @@
-#!/usr/bin/fish
+#!/usr/bin/env fish
 
 # Get the current hostname (you can also change this to check a specific environment variable if you prefer)
 set current_host (hostname)

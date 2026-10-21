@@ -39,7 +39,7 @@ alias vim 'nvim'
 alias cat 'bat'
 
 # alias for eza
-alias ls 'lo'
+# alias ls 'lo'
 
 # venv stuff
 alias v 'source venv/bin/activate.fish'

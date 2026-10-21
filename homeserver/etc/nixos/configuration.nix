@@ -103,6 +103,7 @@
     bat
     rustup
     ripgrep
+    borgbackup
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -178,6 +179,38 @@
       ExecStart = "${pkgs.tailscale}/bin/tailscale file get --loop --conflict=rename /home/arjun/drive";
       Restart = "always";
       RestartSec = "5s";
+    };
+  };
+
+  # Define the systemd service for the backup
+  systemd.services.borg-backup = {
+    description = "Daily Borg Backup to Hetzner Storage Box";
+    after = [ "network-online.target" ];
+    wants = [ "network-online.target" ];
+    
+    script = ''
+      export BORG_PASSPHRASE='${lib.removeSuffix "\n" (builtins.readFile ./secrets/.borg-passphrase)}'
+
+      exec ${pkgs.borgbackup}/bin/borg create -v --stats \
+          ssh://u696621@u696621.your-storagebox.de:23/./backups/homeserver::{now:%Y-%m-%d_%H:%M} \
+          /home/arjun \
+          --exclude '/home/arjun/dotfiles' \
+          --exclude '/home/arjun/.cache'
+    '';
+
+    serviceConfig = {
+      Type = "oneshot";
+      User = "arjun"; # Run as root so it can read all user files in /home/arjun if needed
+    };
+  };
+
+  # Define the systemd timer to run it daily
+  systemd.timers.borg-backup = {
+    description = "Daily Borg Backup Timer";
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      OnCalendar = "daily";
+      Persistent = true; # Runs immediately if the machine was off during scheduled time
     };
   };
 

@@ -1,7 +1,7 @@
 if test (hostname) = "homeserver";
     alias battery 'acpi -b'
     alias rebuild 'sudo nixos-rebuild switch --flake /etc/nixos#homeserver'
-    alias nixconf 'vim ~/dotfiles/homeserver/etc/nixos/configuration.nix'
+    alias nixconf 'cd ~/dotfiles/homeserver/etc/nixos && vim ~/dotfiles/homeserver/etc/nixos/configuration.nix'
 end
 if test (hostname) = "pc";
     alias mail 'aerc'

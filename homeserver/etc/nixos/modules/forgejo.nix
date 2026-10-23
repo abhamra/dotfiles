@@ -5,24 +5,6 @@ let
   css = "${custom}/public/assets/css";
 in
 {
-  services.forgejo.settings.ui = {
-    THEMES = "abhamra-auto,abhamra-light,abhamra-dark,forgejo-auto,forgejo-light,forgejo-dark";
-    DEFAULT_THEME = "abhamra-auto";
-  };
-
-  systemd.tmpfiles.rules = [
-    "d '${custom}/public' - forgejo forgejo - -"
-    "d '${custom}/public/assets' - forgejo forgejo - -"
-    "d '${css}' - forgejo forgejo - -"
-    "d '${custom}/public/assets/fonts' - forgejo forgejo - -"
-    "C+ '${css}/abhamra-common.css' - forgejo forgejo - ${./forgejo-theme/abhamra-common.css}"
-    "C+ '${css}/theme-abhamra-light.css' - forgejo forgejo - ${./forgejo-theme/theme-abhamra-light.css}"
-    "C+ '${css}/theme-abhamra-dark.css' - forgejo forgejo - ${./forgejo-theme/theme-abhamra-dark.css}"
-    "C+ '${css}/theme-abhamra-auto.css' - forgejo forgejo - ${./forgejo-theme/theme-abhamra-auto.css}"
-  ];
-}
-
-{
   services.forgejo = {
     enable = true;
     database.type = "postgres";
@@ -36,6 +18,10 @@ in
         HTTP_ADDR = "127.0.0.1";
       };
       service.DISABLE_REGISTRATION = true;
+      ui = {
+        THEMES = "abhamra-auto,abhamra-light,abhamra-dark,forgejo-auto,forgejo-light,forgejo-dark";
+        DEFAULT_THEME = "abhamra-auto";
+      };
     };
   };
 
@@ -49,6 +35,17 @@ in
       }
     ];
   };
+
+  systemd.tmpfiles.rules = [
+    "d '${custom}/public' - forgejo forgejo - -"
+    "d '${custom}/public/assets' - forgejo forgejo - -"
+    "d '${css}' - forgejo forgejo - -"
+    "d '${custom}/public/assets/fonts' - forgejo forgejo - -"
+    "C+ '${css}/abhamra-common.css' - forgejo forgejo - ${./forgejo-theme/abhamra-common.css}"
+    "C+ '${css}/theme-abhamra-light.css' - forgejo forgejo - ${./forgejo-theme/theme-abhamra-light.css}"
+    "C+ '${css}/theme-abhamra-dark.css' - forgejo forgejo - ${./forgejo-theme/theme-abhamra-dark.css}"
+    "C+ '${css}/theme-abhamra-auto.css' - forgejo forgejo - ${./forgejo-theme/theme-abhamra-auto.css}"
+  ];
 
   # Cloudflare Tunnel: outbound connection to Cloudflare, so no open ports
   # or router access are needed. Ingress (git.abhamra.com -> 127.0.0.1:3000)

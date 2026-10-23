@@ -45,8 +45,10 @@
     description = "Daily Borg Backup to Hetzner Storage Box";
     after = [ "network-online.target" ];
     wants = [ "network-online.target" ];
+    # LoadCredential sets $CREDENTIALS_DIRECTORY, which we can then use to get the borg-passphrase
     script = ''
-      export BORG_PASSPHRASE="$(cat /var/lib/nixos-secrets/.borg-passphrase)"
+      BORG_PASSPHRASE="$(cat "$CREDENTIALS_DIRECTORY/borg-passphrase")"
+      export BORG_PASSPHRASE
       exec ${pkgs.borgbackup}/bin/borg create -v --stats \
           ssh://u696621@u696621.your-storagebox.de:23/./backups/homeserver::{now:%Y-%m-%d_%H:%M} \
           /home/arjun \
@@ -56,6 +58,7 @@
     serviceConfig = {
       Type = "oneshot";
       User = "arjun";
+      LoadCredential = "borg-passphrase:/var/lib/nixos-secrets/.borg-passphrase";
     };
   };
 

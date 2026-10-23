@@ -1,10 +1,14 @@
 { config, lib, pkgs, ... }:
 
+
 {
+
   services.openssh = {
     enable = true;
     settings.PasswordAuthentication = false;
     settings.PermitRootLogin = "no";
+
+    authorizedKeysFiles = [ "/var/lib/ssh-keys/%u" ];
   };
 
   services.syncthing = {
@@ -22,7 +26,7 @@
     enable = true;
     trustedInterfaces = [ config.services.tailscale.interfaceName "tailscale0" ];
     allowedUDPPorts = [ config.services.tailscale.port 22000 ];
-    allowedTCPPorts = [ 22000 ];
+    allowedTCPPorts = [ 22000 80 443 ];
     checkReversePath = "loose";
   };
 

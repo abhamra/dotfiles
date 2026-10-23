@@ -19,6 +19,8 @@
       nodejs
       luarocks
       syncthing
+      dig
+      cloudflared
     ];
     shell = pkgs.fish;
   };

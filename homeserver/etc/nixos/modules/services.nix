@@ -26,7 +26,7 @@
     enable = true;
     trustedInterfaces = [ config.services.tailscale.interfaceName "tailscale0" ];
     allowedUDPPorts = [ config.services.tailscale.port 22000 ];
-    allowedTCPPorts = [ 22000 80 443 ];
+    allowedTCPPorts = [ 22000 ];
     checkReversePath = "loose";
   };
 

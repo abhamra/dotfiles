@@ -42,7 +42,6 @@
     zoxide
     eza
     bat
-    cat
     rustup
     ripgrep
     borgbackup

@@ -19,7 +19,7 @@
 
           services.github2forgejo = {
             enable = true;
-            environmentFile = "/secrets/github2forgejo.env";
+            environmentFile = "/var/lib/nixos-secrets/github2forgejo.env";
           };
         }
 

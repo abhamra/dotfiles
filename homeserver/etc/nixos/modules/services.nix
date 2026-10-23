@@ -42,7 +42,7 @@
     after = [ "network-online.target" ];
     wants = [ "network-online.target" ];
     script = ''
-      export BORG_PASSPHRASE='${lib.removeSuffix "\n" (builtins.readFile ../secrets/.borg-passphrase)}'
+      export BORG_PASSPHRASE="$(cat /var/lib/nixos-secrets/.borg-passphrase)"
       exec ${pkgs.borgbackup}/bin/borg create -v --stats \
           ssh://u696621@u696621.your-storagebox.de:23/./backups/homeserver::{now:%Y-%m-%d_%H:%M} \
           /home/arjun \

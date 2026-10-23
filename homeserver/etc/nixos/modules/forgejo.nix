@@ -16,6 +16,7 @@ in
         ROOT_URL = "https://git.abhamra.com/";
         HTTP_PORT = 3000;
         HTTP_ADDR = "127.0.0.1";
+        LANDING_PAGE = "/abhamra";
       };
       service.DISABLE_REGISTRATION = true;
       ui = {

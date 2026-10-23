@@ -1,0 +1,23 @@
+@import "./theme-forgejo-dark.css";
+@import "./abhamra-common.css";
+
+:root {
+  --color-body: #1c1a17;
+  --color-text: #d8d2c5;
+  --color-text-light: #9e978b;
+  --color-text-light-1: #9e978b;
+  --color-text-light-2: #9e978b;
+  --color-box-body: #1c1a17;
+  --color-box-header: #24211d;
+  --color-card: #1c1a17;
+  --color-nav-bg: #1c1a17;
+  --color-nav-hover-bg: #2a2723;
+  --color-footer: #1c1a17;
+  --color-input-background: #1c1a17;
+  --color-input-text: #d8d2c5;
+  --color-input-border: #383430;
+  --color-primary: #d8d2c5;
+  --color-primary-contrast: #1c1a17;
+  --color-primary-dark-1: color-mix(in srgb, var(--color-primary) 85%, black);
+  --color-primary-light-1: color-mix(in srgb, var(--color-primary) 85%, white);
+}

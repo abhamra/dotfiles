@@ -1,0 +1,2 @@
+@import "./theme-abhamra-light.css" (prefers-color-scheme: light);
+@import "./theme-abhamra-dark.css" (prefers-color-scheme: dark);

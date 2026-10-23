@@ -1,0 +1,24 @@
+@font-face { font-family: "Berkeley Mono"; src: url("/assets/fonts/BerkeleyMono-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Berkeley Mono"; src: url("/assets/fonts/BerkeleyMono-Oblique.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Berkeley Mono"; src: url("/assets/fonts/BerkeleyMono-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Berkeley Mono"; src: url("/assets/fonts/BerkeleyMono-Bold-Oblique.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+
+:root {
+  --fonts-monospace: "Berkeley Mono", "JetBrains Mono", "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --fonts-proportional: var(--fonts-monospace);
+  --fonts-regular: var(--fonts-monospace);
+  --border-radius: 0;
+}
+
+body { line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+/* masthead feel: tracked uppercase nav + double rule */
+#navbar { border-bottom: 3px double var(--color-text); }
+#navbar .item { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; }
+
+/* yellow highlighter on link hover, content links only */
+.markup a:hover {
+  background-color: rgba(255, 224, 0, 0.4);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

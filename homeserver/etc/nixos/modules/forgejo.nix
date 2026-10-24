@@ -11,7 +11,7 @@ in
     lfs.enable = true;
 
     settings = {
-      DEFAULT.APP_NAME = "git.abhamra.com";
+      DEFAULT.APP_NAME = "code and projects";
       "ui.meta" = {
         AUTHOR = "Arjun";
         DESCRIPTION = "Arjun's code and projects";

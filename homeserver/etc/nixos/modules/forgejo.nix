@@ -11,6 +11,12 @@ in
     lfs.enable = true;
 
     settings = {
+      DEFAULT.APP_NAME = "git.abhamra.com";
+      "ui.meta" = {
+        AUTHOR = "Arjun";
+        DESCRIPTION = "Arjun's code and projects";
+        KEYWORDS = "git,projects";
+      };
       server = {
         DOMAIN = "git.abhamra.com";
         ROOT_URL = "https://git.abhamra.com/";

@@ -18,6 +18,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   networking.hostName = "homeserver";
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.networkmanager.enable = true;
 
